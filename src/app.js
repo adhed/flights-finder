@@ -14,11 +14,14 @@ angular.module('myApp', [
 .component('homePage', HomeComponent)
 .service('AiportsService', AirportsService)
 .service('CheapFlightService', CheapFlightService)
-.config(($stateProvider) => {
+.config(($stateProvider, $urlRouterProvider) => {
   'ngInject';
+
+  $urlRouterProvider.otherwise('/');
+
   $stateProvider
     .state('home', {
-      url: '',
+      url: '/',
       template: '<home-page></home-page>'
     });
 });

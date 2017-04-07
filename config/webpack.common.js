@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
-    app: './src/app.js'
+    app: './src/app/app.js'
   },
   output: {
     path: path.join(__dirname, '..', 'dist'),
@@ -30,17 +30,8 @@ module.exports = {
       { test: /\.html$/, loader: 'raw' },
       // inline base64 URLs for <=8k images, direct URLs for the rest
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
-      // helps to load bootstrap's css.
-      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&minetype=application/font-woff' },
-      { test: /\.woff2$/,
-        loader: 'url?limit=10000&minetype=application/font-woff' },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&minetype=application/octet-stream' },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file' },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&minetype=image/svg+xml' }
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
     ]
   },
   devtool: 'source-map',

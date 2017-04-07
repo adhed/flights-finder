@@ -1,0 +1,23 @@
+.top-bar {
+    width: 100%;
+    background: #073590;
+    border-bottom: 2px solid #F1C933;
+    
+    .slogan {
+        padding: 25px 0 15px 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        color: #f7f7f7;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    i {
+        float: left;
+        margin-right: 10px;
+        color: #F1C933;
+    }
+}

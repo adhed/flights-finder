@@ -1,0 +1,23 @@
+.airport-selector {
+    float: left;
+    padding: 25px;
+    background: #073590;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.suggestions {
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    background: whitesmoke;
+    border: 1px solid black;
+    width: 220px;
+}
+
+.selected-airport {
+    color: white;
+    margin: 20px;
+}

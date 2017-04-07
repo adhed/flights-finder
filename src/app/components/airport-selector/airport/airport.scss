@@ -1,0 +1,13 @@
+.airport {
+    cursor: pointer;
+    padding: 5px;
+
+    .airport-country {
+        display: block;
+        font-style: italic;
+    }
+}
+
+.airport:hover {
+    background: lightgray;
+}

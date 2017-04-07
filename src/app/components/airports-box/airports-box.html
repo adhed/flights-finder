@@ -1,0 +1,13 @@
+<div class="airports-box">
+    <h1>Airports box</h1>
+
+    <airport-selector 
+        label="departure"
+        results-provider="$ctrl._AirportsService.getDepartureAirports(filterTerm)">
+    </airport-selector>
+
+    <airport-selector
+        label="destination"
+        results-provider="$ctrl._AirportsService.getDestinationAirports(filterTerm)">
+    </airport-selector>
+</div>

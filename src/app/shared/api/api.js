@@ -6,6 +6,6 @@ export const api = {
     }
 }
 
-export const getFlightsUrl = ({ from, to, limit }) => {
-    return `${api.baseUrl}${api.paths.flights}${from.airportCode}/to/${to.airportCode}/${from.date}/${to.date}/250/unique/?limit=${limit}&offset-0`;
+export const getFlightsUrl = ({ airportsCodes, dates, limit }) => {
+    return `${api.baseUrl}${api.paths.flights}${airportsCodes.departure}/to/${airportsCodes.destination}/${dates.start}/${dates.end}/250/unique/?limit=${limit}&offset-0`;
 }

@@ -1,7 +1,8 @@
 <div 
     class="airport-selector" 
     click-outside="$ctrl.handleClickOutside()">
-        <label>{{ $ctrl.label }}</label>
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <label ng-bind="$ctrl.label"></label>
         <input 
             type="text" 
             ng-model="$ctrl.filterTerm"
@@ -16,8 +17,5 @@
                     on-click="$ctrl.handleAirportClick(suggestion)"
                     ng-repeat="suggestion in $ctrl.suggestions">
                 </airport>
-        </div>
-        <div class="selected-airport">
-            Selected airport: {{ $ctrl.selectedAirport.name }}
         </div>
 </div>

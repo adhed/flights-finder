@@ -1,23 +1,42 @@
 .airport-selector {
     float: left;
-    padding: 25px;
-    background: #073590;
     margin: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
     width: 200px;
-}
+    background: #bcd4e6;
+    border: 1px solid #5d5959;
+    box-sizing: border-box;
+    border-radius: 5px 5px 0 0;
+    padding-top: 5px;
 
-.suggestions {
-    position: absolute;
-    max-height: 200px;
-    overflow-y: auto;
-    background: whitesmoke;
-    border: 1px solid black;
-    width: 220px;
-}
+    i {
+        padding: 0 5px 0 10px;
+    }
 
-.selected-airport {
-    color: white;
-    margin: 20px;
+    label {
+        color: black;
+    }
+
+    .suggestions {
+        position: absolute;
+        max-height: 200px;
+        overflow-y: auto;
+        background: whitesmoke;
+        border: 1px solid black;
+        width: 220px;
+        padding: 3px;
+        z-index: 2;
+    }
+
+    input {
+        padding: 10px;
+        border: 0;
+        width: 100%;
+        margin-top: 3px;
+        border-top: 1px solid #296898;
+        outline: none;
+    }
+
+    input:focus {
+        background: lightgray;
+    }
 }

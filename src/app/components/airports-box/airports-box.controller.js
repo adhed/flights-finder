@@ -2,7 +2,15 @@ class AirportsBoxController {
     constructor(AirportsService) {
         'ngInject';
 
-        this._AirportsService = AirportsService;        
+        this._AirportsService = AirportsService;  
+        this.inputs = {
+            departure: {
+                label: 'Departure:'
+            },
+            destination: {
+                label: 'Destination:'
+            }
+        }      ;
         this._init();
     }
 

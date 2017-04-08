@@ -1,13 +1,15 @@
 <div class="airports-box">
-    <h1>1. Choose your departure and destination airports:</h1>
-
     <airport-selector 
-        label="departure"
+        label="$ctrl.inputs.departure.label"
         results-provider="$ctrl._AirportsService.getDepartureAirports(filterTerm)">
     </airport-selector>
 
+    <a href="#" class="link" title="Swap locations">
+        <i class="fa fa-exchange exchange" aria-hidden="true"></i>
+    </a>
+    
     <airport-selector
-        label="destination"
+        label="$ctrl.inputs.destination.label"
         results-provider="$ctrl._AirportsService.getDestinationAirports(filterTerm)">
     </airport-selector>
 </div>

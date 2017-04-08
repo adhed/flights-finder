@@ -1,6 +1,22 @@
 .flights-form {
-    width: 100%;
-    display: block;
-    float: left;
     padding: 15px;
+    background-image: linear-gradient(to top,#1e8adf,#2994e6);
+    border: 3px solid darkblue;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #F1C933;
+    border: 2px solid #F1C933;
+    padding: 10px 40px 10px 40px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #073590;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #d8b120;
+    border: 2px solid #d8b120;
 }

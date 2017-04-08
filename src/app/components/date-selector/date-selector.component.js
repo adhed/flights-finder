@@ -1,7 +1,7 @@
-import template from './date-selector.component.html';
+import template from './date-selector.html';
 import controller from './date-selector.controller';
 
-export const DateSelectorComponent = {
+export const dateSelectorComponent = {
   bindings: {
     date: '='
   },

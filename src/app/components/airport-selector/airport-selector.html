@@ -1,18 +1,23 @@
-<div class="airport-selector">
-    <label>{{ $ctrl.label }}</label>
-    <input 
-        type="text" 
-        ng-model="$ctrl.filterTerm"
-        ng-click="$ctrl.handleInputClick()"
-        ng-change="$ctrl.handleInputChange()"/>
-    <div class="suggestions" ng-show="$ctrl.showSuggestions">
-        <airport 
-            params="suggestion"
-            on-click="$ctrl.handleAirportClick(suggestion)"
-            ng-repeat="suggestion in $ctrl.suggestions">
-        </airport>
-    </div>
-    <div class="selected-airport">
-        Selected airport: {{ $ctrl.selectedAirport.name }}
-    </div>
+<div 
+    class="airport-selector" 
+    click-outside="$ctrl.handleClickOutside()">
+        <label>{{ $ctrl.label }}</label>
+        <input 
+            type="text" 
+            ng-model="$ctrl.filterTerm"
+            ng-click="$ctrl.handleInputClick()"
+            placelholder="departure"
+            ng-change="$ctrl.handleInputChange()"/>
+        <div 
+            class="suggestions" 
+            ng-show="$ctrl.showSuggestions">
+                <airport 
+                    params="suggestion"
+                    on-click="$ctrl.handleAirportClick(suggestion)"
+                    ng-repeat="suggestion in $ctrl.suggestions">
+                </airport>
+        </div>
+        <div class="selected-airport">
+            Selected airport: {{ $ctrl.selectedAirport.name }}
+        </div>
 </div>

@@ -5,13 +5,16 @@ import Services from './services/services';
 import { appConfig } from './app.config';
 import home from './home/home';
 import 'font-awesome-webpack';
+import '@iamadamjowett/angular-click-outside';
+
 import './app.scss';
 
 const requirements = [
   uiRouter,
   Components,
   Services,
-  home  
+  home,
+  'angular-click-outside'
 ];
 
 angular.module('app', requirements)

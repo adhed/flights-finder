@@ -31,6 +31,10 @@ class AirportSelector {
         this.selectedAirport = airport;
         this._AirportsService.setSelectedAirport(airport);
     }
+
+    handleClickOutside() {
+        this.showSuggestions = false;
+    }
     
     _showSuggestionsIfExist() {
         this.showSuggestions = !!this.suggestions.length

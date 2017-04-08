@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@iamadamjowett/angular-click-outside": "^2.10.1",
     "angular": "1.6",
     "angular-mocks": "~1.5.0",
     "angular-ui-router": "^1.0.0-rc.1",

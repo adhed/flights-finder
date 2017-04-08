@@ -3,5 +3,8 @@ import controller from './airports-box.controller';
 
 export const airportsBox = {
     template,
-    controller
+    controller,
+    bindings: {
+        onChange: '&'
+    }
 }

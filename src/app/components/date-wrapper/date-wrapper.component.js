@@ -4,7 +4,8 @@ import controller from './date-wrapper.controller';
 export const dateWrapperComponent = {
   bindings: {
     startDate: '=',
-    endDate: '='
+    endDate: '=',
+    onChange: '&'
   },
   template,
   controller

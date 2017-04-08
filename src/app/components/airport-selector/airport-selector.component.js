@@ -5,7 +5,9 @@ export const airportSelector = {
     template,
     controller: controller,
     bindings: {
-        resultsProvider: '&',
-        label: '<'
+        options: '<',
+        label: '<',
+        onFilterChange: '&',
+        onSelect: '&'
     }
 }

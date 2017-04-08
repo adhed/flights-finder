@@ -5,17 +5,18 @@
         <label ng-bind="$ctrl.label"></label>
         <input 
             type="text" 
-            ng-model="$ctrl.filterTerm"
+            ng-model="$ctrl.input.value"
             ng-click="$ctrl.handleInputClick()"
-            placelholder="departure"
-            ng-change="$ctrl.handleInputChange()"/>
+            placeholder="Choose airport..."
+            ng-change="$ctrl.onFilterChange({ $event: { filter: $ctrl.input.value } })"/>
         <div 
-            class="suggestions" 
-            ng-show="$ctrl.showSuggestions">
+            class="options" 
+            ng-show="$ctrl.showOptions">
                 <airport 
-                    params="suggestion"
-                    on-click="$ctrl.handleAirportClick(suggestion)"
-                    ng-repeat="suggestion in $ctrl.suggestions">
+                    params="option"
+                    on-click="$ctrl.handleOptionClick(option)"
+                    ng-repeat="option in $ctrl.options">
                 </airport>
         </div>
+        Airports: {{ $ctrl.options.length }}
 </div>

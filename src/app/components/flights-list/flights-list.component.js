@@ -1,5 +1,8 @@
 import template from './flights-list.html';
 
 export const flightsList = {
-    template
+    template,
+    bindings: {
+        flights: '<'
+    }
 }

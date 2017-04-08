@@ -3,7 +3,10 @@ import controller from './date-selector.controller';
 
 export const dateSelectorComponent = {
   bindings: {
-    date: '='
+    placeHolder: '<',
+    label: '<',
+    date: '<',
+    onChange: '&'
   },
   template,
   controller

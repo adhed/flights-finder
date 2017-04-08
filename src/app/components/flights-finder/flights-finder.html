@@ -1,12 +1,12 @@
 <div class="flights-finder column">
     <div class="columns">
         <div class="column">
-             <flights-form></flights-form>
+             <flights-form on-submit="$ctrl.handleFormSubmit($event)"></flights-form>
         </div>
     </div>
     <div class="columns">
         <div class="column">
-             <flights-list></flights-list>
+             <flights-list flights="$ctrl.flights"></flights-list>
         </div>
     </div>
 </div>

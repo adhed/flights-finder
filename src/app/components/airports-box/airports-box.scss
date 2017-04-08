@@ -6,5 +6,18 @@
         float: left;
         color: whitesmoke;
     }
+
+    input {
+        padding: 10px;
+        border: 0;
+        width: 100%;
+        margin-top: 3px;
+        border-top: 1px solid #296898;
+        outline: none;
+    }
+
+    input:focus {
+        background: lightgray;
+    }
 }
 

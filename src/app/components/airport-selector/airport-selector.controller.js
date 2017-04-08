@@ -1,43 +1,43 @@
 import { debounce } from '../../shared/utils';
 
 class AirportSelector {
-    constructor(AirportsService) {
-        'ngInject';
-
-        this.filterTerm = '';
-        this.suggestions = [];
-        this.showSuggestions = false;
-        this.selectedAirport = null;
-
-        this._AirportsService = AirportsService;
+    $onInit() {
+        this.input = {
+            value: ''
+        }
+        this.showOptions = false;
+        this.selectedAirport = {};
+        this._shouldBeOptionsVisible = false;
     }
 
-    handleInputChange(event) {
-       this.suggestions = this.resultsProvider({ filterTerm: this.filterTerm });
-       this._showSuggestionsIfExist();
+    $onChanges() {
+        this._updateShowOptions();
     }
 
     handleInputClick() {
-        this.suggestions = this.resultsProvider({ filterTerm: '' });
-        this._showSuggestionsIfExist();
+        this._shouldBeOptionsVisible = true;
+        this._updateShowOptions();
     }
 
     handleInputBlur() {
-        this.showSuggestions = false;
+        this._shouldBeOptionsVisible = false;
+        this._updateShowOptions();
     }
 
-    handleAirportClick(airport) {
-        this.showSuggestions = false;
-        this.selectedAirport = airport;
-        this._AirportsService.setSelectedAirport(airport);
+    handleOptionClick(airport) {
+        this._shouldBeOptionsVisible = false;
+        this._updateShowOptions();
+        this.input.value = airport.name;
+        this.onSelect({ $event: { airport } });
     }
 
     handleClickOutside() {
-        this.showSuggestions = false;
+        this._shouldBeOptionsVisible = false;
+        this._updateShowOptions();
     }
     
-    _showSuggestionsIfExist() {
-        this.showSuggestions = !!this.suggestions.length
+    _updateShowOptions() {
+        this.showOptions = this._shouldBeOptionsVisible && !!this.options.length;
     }
 }
 

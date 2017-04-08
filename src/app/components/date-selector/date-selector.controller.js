@@ -1,2 +1,6 @@
-export default function DateSelectorController() {
+class DateSelector {
+    $onInit() {
+    }
+    
 }
+export default DateSelector

@@ -6,13 +6,9 @@ class AirportsService {
 
     this._$http = $http;
     this._$q = $q;
-    this._allAirports = [];
-    this._routes = {};
-    this._matchingAirports = [];
-    this._selectedAirportCode = '';
   }
 
-  collectAirports() {
+  getAirportsInfo() {
     const deferred = this._$q.defer();
     const URL = `${api.baseUrl}${api.paths.airports}`;
 
@@ -24,12 +20,20 @@ class AirportsService {
     return deferred.promise;
   }
 
-  getDepartureAirports(filterTerm = '') {
-    return this._getAirports(this._allAirports, filterTerm);
+  getFilteredAirports(airports = [], limitedRoutes, filterTerm = '') {
+    const areLimitedRoutesDefined = !!limitedRoutes && !!limitedRoutes.length;
+    const availableAirports = areLimitedRoutesDefined ? 
+      this._getAvailableAirports(airports, limitedRoutes) : airports;
+    return this._getFilteredAirports(availableAirports, filterTerm);
   }
 
-  getDestinationAirports(filterTerm = '') {
-    return this._getAirports(this._matchingAirports, filterTerm);
+  getRoutesFromAirport(routes, selectedAirport) {
+    const possibleRoutes = routes[selectedAirport.iataCode];
+    return possibleRoutes.map(iataCode => {
+      return allAirports.find(airport => {
+        return airport.iataCode === iataCode;
+      });
+    });
   }
 
   setSelectedAirport(airport = {}) {
@@ -37,33 +41,37 @@ class AirportsService {
     this._findMatchingAirports();
   }
 
-  _getAirports(airportsCollection = [], filterTerm = '') {
+  _getAvailableAirports(airports, routes) {
+    return routes.map(iataCode => {
+      return airports.find(airport => {
+        return airport.iataCode === iataCode;
+      })
+    })
+  }
+
+  _getFilteredAirports(airports, filterTerm) {
     const filter = filterTerm.toUpperCase();
-    return airportsCollection.filter(airport => {
+    return airports.filter(airport => {
       return airport.country.toUpperCase().includes(filter)
         || airport.iataCode.toUpperCase().includes(filter)
         || airport.name.toUpperCase().includes(filter);
     });
   }
 
-  _findMatchingAirports() {
-    const possibleRoutes = this._routes[this._selectedAirportCode];
-
-    this._matchingAirports = possibleRoutes.map(iataCode => {
-      return this._allAirports.find(airport => {
-        return airport.iataCode === iataCode;
-      });
-    });
-  }
-
   _onGetAirportsSuccess(deferred, response = {}) {
-    if (!response.data || !response.data.airports || !response.data.routes) {
+    let isResponseOk = response.data 
+      && response.data.airports 
+      && response.data.routes
+
+    if (!isResponseOk) {
       deferred.reject('EMPTY_RESPONSE');
       return;
     }
 
-    this._parseAirports(response.data.airports);
-    this._routes = response.data.routes;
+    deferred.resolve({
+      airports: this._getParsedAirports(response.data.airports),
+      routes: this._routes = response.data.routes
+    });
   }
 
   _onGetAirportsFail(response) {
@@ -74,8 +82,8 @@ class AirportsService {
     console.debug("There's a problem with request to server:", error);
   }
 
-  _parseAirports(airports = []) {
-    this._allAirports = airports.map(airport => {
+  _getParsedAirports(airports = []) {
+    return airports.map(airport => {
       return {
         country: airport.country.name,
         iataCode: airport.iataCode,

@@ -1,1 +1,10 @@
-<input class="input is-medium" type="date" ng-model="$ctrl.date">
+<div class="date-selector">
+    <label>{{ $ctrl.label }}</label>
+    <md-datepicker 
+        md-open-on-focus="true"
+        md-hide-icons=""
+        ng-change="$ctrl.onChange({ $event: { date: ctrl.myDate } })"
+        ng-model="$ctrl.date">
+    </md-datepicker>
+</div>
+

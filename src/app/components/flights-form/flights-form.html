@@ -1,13 +1,13 @@
 <div class="flights-form">
     <div class="columns">
         <div class="column">
-            <airports-box></airports-box>
+            <airports-box on-change="$ctrl.handleAirportsChange($event)"></airports-box>
         </div>
     </div>
     <div class="columns">
         <div class="column">
-            <date-wrapper></date-wrapper>
+            <date-wrapper on-change="$ctrl.handleDateChange($event)"></date-wrapper>
         </div>
     </div>
-    <button>Find flights</button>
+    <button class="primary" ng-click="$ctrl.handleButtonClick()">Find flights</button>
 </div>

@@ -1,7 +1,9 @@
 <div class="airports-box">
     <airport-selector 
         label="$ctrl.inputs.departure.label"
-        results-provider="$ctrl._AirportsService.getDepartureAirports(filterTerm)">
+        on-filter-change="$ctrl.handleDepartureFilterChange($event)"
+        on-select="$ctrl.handleDepartureAirportSelect($event)"
+        options="$ctrl.inputs.departure.options">
     </airport-selector>
 
     <a href="#" class="link" title="Swap locations">
@@ -10,6 +12,8 @@
     
     <airport-selector
         label="$ctrl.inputs.destination.label"
-        results-provider="$ctrl._AirportsService.getDestinationAirports(filterTerm)">
+        on-filter-change="$ctrl.handleDestinationFilterChange($event)"
+        on-select="$ctrl.handleDestinationAirportSelect($event)"
+        options="$ctrl.inputs.destination.options">
     </airport-selector>
 </div>

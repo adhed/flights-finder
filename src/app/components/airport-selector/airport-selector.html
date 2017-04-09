@@ -3,14 +3,15 @@
     click-outside="$ctrl.handleClickOutside()">
         <div class="label-wrapper">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <label ng-bind="$ctrl.label"></label>
+            <label>{{ $ctrl.label }}:</label>
         </div>
         
         <input 
             type="text" 
             ng-model="$ctrl.selected"
             ng-click="$ctrl.handleInputClick()"
-            placeholder="Choose airport..."
+            placeholder="Choose your {{ $ctrl.label  }} Airport"
+            ng-keydown="$ctrl.handleKeyDown($event)"
             required
             ng-change="$ctrl.onFilterChange({ $event: { filter: $ctrl.selected } })"/>
         <div 

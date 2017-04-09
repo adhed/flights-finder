@@ -2,8 +2,8 @@ import { debounce } from '../../shared/utils';
 
 class AirportSelector {
     $onInit() {
+        this.selected = '';
         this.showOptions = false;
-        this.selectedAirport = {};
         this._shouldBeOptionsVisible = false;
     }
 
@@ -31,6 +31,16 @@ class AirportSelector {
     handleClickOutside() {
         this._shouldBeOptionsVisible = false;
         this._updateShowOptions();
+    }
+
+    handleKeyDown(event) {
+        if (event.key === 'Backspace') {
+            this._handleBackspace();
+        }
+    }
+
+    _handleBackspace() {
+        this.onSelect({ $event: { airport: {} }});
     }
     
     _updateShowOptions() {

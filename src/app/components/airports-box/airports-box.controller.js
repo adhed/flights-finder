@@ -11,7 +11,7 @@ class AirportsBoxController {
         this._routes = {};
         this.inputs = {
             departure: {
-                label: 'Departure:',
+                label: 'Departure',
                 selectedAirport: {
                     name: '',
                     iataCode: '',
@@ -21,7 +21,7 @@ class AirportsBoxController {
                 options: []
             },
             destination: {
-                label: 'Destination:',
+                label: 'Destination',
                 selectedAirport: {
                     name: '',
                     iataCode: '',

@@ -6,6 +6,7 @@
     padding: 5px 0 5px 0;
     border-bottom: 1px solid #eaeaea;
     outline: none;
+    border-top: 1px solid transparent;
 
     .airport-country {
         display: block;
@@ -19,7 +20,9 @@
 }
 
 .airport:hover {
-    background: lightgray;
+    background: #f1c933;
+    border-bottom: 1px solid #969393;
+    border-top: 1px solid #969393;
 }
 
 .aiport:focus {

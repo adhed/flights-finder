@@ -11,7 +11,7 @@
         padding: 5px 10px 5px 0;
 
             i {
-                padding: 0 10px 0 10px;
+                padding: 0 10px 0 12px;
                 float: left;
             }
 
@@ -26,6 +26,7 @@
         font-size: 1.2em;
         font-weight: bold;
         border: 0;
+        background: #fafafa;
         width: 100%;
         box-sizing: border-box;
         outline: none;
@@ -33,7 +34,7 @@
     }
 
     input:focus {
-        background: lightgray;
+        background: rgb(245, 232, 182);
     }
 
     .options {
@@ -46,5 +47,12 @@
         border: 1px solid black;
         padding: 3px;
         z-index: 5;
+    }
+
+    *::-webkit-input-placeholder {
+        color: #b9b9b9;
+    }
+    *:-moz-placeholder {
+        color: #b9b9b9;
     }
 }

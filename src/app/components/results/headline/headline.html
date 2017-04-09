@@ -1,4 +1,4 @@
-<div class="headline" ng-show="$ctrl.show">
+<div class="headline">
     <span class="form-result" ng-show="!!$ctrl.flightsLength">
     Found {{ $ctrl.flightsLength }} {{ $ctrl.flightsLength === 1 ? 'flight' : 'flights' }} from 
         <strong>{{ $ctrl.airports.departure }}</strong>
@@ -6,6 +6,6 @@
         <strong>{{ $ctrl.airports.destination }}</strong>:
     </span>
     <span class="form-result" ng-show="!$ctrl.flightsLength">
-        There aren't any flights with chosen criteria.
+        There aren't any flights that match your criteria.
     </span>
 </div>

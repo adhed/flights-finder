@@ -1,14 +1,31 @@
-<div class="flight">
-    <div class="date-info date-from">
-        <i class="fa fa-plane" aria-hidden="true"></i>
-        <span>{{ $ctrl.flight.dateFrom }}</span>
-    </div>
-    <div class="date-info date-info date-to">
-        <i class="fa fa-plane" aria-hidden="true"></i>
-        <span>{{ $ctrl.flight.dateTo }}</span>
-    </div>
-    <div class="price">
-        <i class="fa fa-credit-card" aria-hidden="true"></i>
-        <strong>{{ $ctrl.flight.currency }}{{ $ctrl.flight.price | number:2 }}</strong>                            
-    </div>
+<div class="flight" 
+     layout-xs="column" 
+     layout-gt-xs="row" 
+     layout-align-gt-xs="start start"
+     layout-align-xs="center none">
+        <div class="date-info date-from" 
+             flex-gt-xs="40"
+             flex-xs="grow" 
+             flex-order-xs="3">
+                <i class="fa fa-plane" aria-hidden="true"></i><label>Fly out:</label>
+                <span>{{ $ctrl.flight.dateFrom }}</span>
+        </div>
+        <div class="date-info date-to" 
+             flex-gt-xs="40"
+             flex-xs="grow" 
+             flex-order-xs="5">
+                <i class="fa fa-plane" aria-hidden="true"></i><label>Fly back:</label>
+                <span>{{ $ctrl.flight.dateTo }}</span>
+        </div>
+        <div class="price" 
+             flex-offset-gt-xs="5"
+             flex-gt-xs="15"
+             flex-xs="25" 
+             flex-offset-xs="25" 
+             flex-order-xs="1">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <strong>{{ $ctrl.flight.currency }}{{ $ctrl.flight.price | number:2 }}</strong>    
+        </div>
+        <div flex-xs="grow" flex-order-xs="2" show-xs>&ensp;</div>
+        <div flex-xs="grow" flex-order-xs="4" show-xs>&ensp;</div>
 </div>

@@ -1,13 +1,15 @@
 .flight {
     margin: 10px 0 10px 0;
-    border: 1px solid #e2e1e1;
+    border: 1px solid #d4d0d0;
     padding: 30px;
+    font-size: 1.1em;
     border-radius: 10px;
+    background: rgba(241, 241, 241, 0.98);
 
     .price {
-        float: right;
         display: flex;
         align-items: center;
+        padding-top: 12px;
 
         i {
             vertical-align: middle;
@@ -22,7 +24,18 @@
     }
 
     .date-info {
-        display: inline-block;
+        border: 1px solid #d2cfcf;
+        padding: 15px;
+        margin-right: 10px;
+        border-radius: 5px;
+
+        label {
+            font-weight: bold;
+        }   
+
+        i {
+            margin-right: 10px;
+        }
     }
 
      .date-to {

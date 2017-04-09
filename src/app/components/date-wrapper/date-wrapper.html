@@ -1,6 +1,6 @@
 <div class="date-wrapper">
-  <div layout="row">
-    <div flex="45">
+  <div layout-gt-xs="row" layout-xs="column" layout-align-xs="space-between none">
+    <div flex-gt-xs="45" flex-xs="grow">
       <date-selector 
         placeholder="$ctrl.dates.start.placeholder"
         label="$ctrl.dates.start.label"
@@ -9,7 +9,9 @@
       </date-selector>
     </div>
 
-    <div flex="45" flex-offset="10">
+    <div flex-xs="grow" show-xs>&ensp;</div>
+
+    <div flex-offset-gt-xs="10" flex-gt-xs="45" flex-xs="grow">
       <date-selector 
         placeholder="$ctrl.dates.end.placeholder"
         label="$ctrl.dates.end.label"

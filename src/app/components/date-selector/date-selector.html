@@ -1,14 +1,19 @@
 <div class="date-selector">
-    <i class="fa fa-calendar calendar" aria-hidden="true"></i>
-    <label>{{ $ctrl.label }}</label>
-    <div class="date-picker-wrapper">
-        <md-datepicker 
-            md-open-on-focus="true"
-            md-hide-icons="calendar"
-            required
-            ng-change="$ctrl.onChange({ $event: { date: $ctrl.date } })"
-            ng-model="$ctrl.date">
-        </md-datepicker>
+    <div flex-xs="45">
+        <i class="fa fa-calendar calendar" aria-hidden="true"></i>
+        <label>{{ $ctrl.label }}</label>
+    </div>
+
+    <div flex-xs="grow">
+        <div class="date-picker-wrapper">
+            <md-datepicker 
+                md-open-on-focus="true"
+                md-hide-icons="calendar"
+                required
+                ng-change="$ctrl.onChange({ $event: { date: $ctrl.date } })"
+                ng-model="$ctrl.date">
+            </md-datepicker>
+        </div>
     </div>
 </div>
 

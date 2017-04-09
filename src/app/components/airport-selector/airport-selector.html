@@ -5,10 +5,10 @@
         <label ng-bind="$ctrl.label"></label>
         <input 
             type="text" 
-            ng-model="$ctrl.input.value"
+            ng-model="$ctrl.selected"
             ng-click="$ctrl.handleInputClick()"
             placeholder="Choose airport..."
-            ng-change="$ctrl.onFilterChange({ $event: { filter: $ctrl.input.value } })"/>
+            ng-change="$ctrl.onFilterChange({ $event: { filter: $ctrl.selected } })"/>
         <div 
             class="options" 
             ng-show="$ctrl.showOptions">

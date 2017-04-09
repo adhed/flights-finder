@@ -8,6 +8,7 @@ export const airportSelector = {
         options: '<',
         label: '<',
         onFilterChange: '&',
-        onSelect: '&'
+        onSelect: '&',
+        selected: '<'
     }
 }

@@ -27,8 +27,6 @@ class FlightsForm {
             departure: event.airportsCodes.departure,
             destination: event.airportsCodes.destination
         };
-
-        console.debug('airports change:', event);
     }
 
     handleDateChange(event = {}) {
@@ -38,8 +36,6 @@ class FlightsForm {
             start: event.dates.start,
             end: event.dates.end
         };
-
-        console.debug('date change:', event);
     }
 }
 

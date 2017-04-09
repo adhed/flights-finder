@@ -2,9 +2,6 @@ import { debounce } from '../../shared/utils';
 
 class AirportSelector {
     $onInit() {
-        this.input = {
-            value: ''
-        }
         this.showOptions = false;
         this.selectedAirport = {};
         this._shouldBeOptionsVisible = false;
@@ -27,7 +24,7 @@ class AirportSelector {
     handleOptionClick(airport) {
         this._shouldBeOptionsVisible = false;
         this._updateShowOptions();
-        this.input.value = airport.name;
+        this.selected = airport.name;
         this.onSelect({ $event: { airport } });
     }
 

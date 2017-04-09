@@ -2,7 +2,7 @@ class AirportsBoxController {
     constructor(AirportsService) {
         'ngInject';
 
-        this._AirportsService = AirportsService;  
+        this._airportsService = AirportsService;  
     }
 
     $onInit() {
@@ -12,14 +12,20 @@ class AirportsBoxController {
         this.inputs = {
             departure: {
                 label: 'Departure:',
-                selected: {},
+                selectedAirport: {
+                    name: '',
+                    iataCode: '',
+                },
                 limitedRoutes: [],
                 filter: '',
                 options: []
             },
             destination: {
                 label: 'Destination:',
-                selected: {},
+                selectedAirport: {
+                    name: '',
+                    iataCode: '',
+                },
                 limitedRoutes: [],
                 filter: '',
                 options: []
@@ -27,6 +33,14 @@ class AirportsBoxController {
         };
 
         this._collectAirportsInfo();
+    }
+
+    handleSwapButtonClick() {
+        this._swapAirportsInInputs();
+        this._updateLimitedRoutes(this.inputs.destination, this.inputs.destination.selectedAirport.iataCode);
+        this._updateLimitedRoutes(this.inputs.departure, this.inputs.departure.selectedAirport.iataCode);
+        this._updateAvailableAirports();
+        this._updateParentState();
     }
 
     handleDepartureFilterChange(event) {
@@ -40,32 +54,42 @@ class AirportsBoxController {
     }
 
     handleDepartureAirportSelect(event) {
-        this.inputs.departure.limitedRoutes = this._routes[event.airport.iataCode];
-        this.inputs.departure.selected = event.airport;
+        this.inputs.departure.selectedAirport = event.airport;
+        this._updateLimitedRoutes(this.inputs.departure, event.airport.iataCode);
         this._updateAvailableAirports();
         this._updateParentState();
     }
 
     handleDestinationAirportSelect(event) {
-        this.inputs.destination.limitedRoutes = this._routes[event.airport.iataCode];
-        this.inputs.destination.selected = event.airport;
+        this.inputs.destination.selectedAirport = event.airport;
+        this._updateLimitedRoutes(this.inputs.destination, event.airport.iataCode);
         this._updateAvailableAirports();
         this._updateParentState();
+    }
+
+    _updateLimitedRoutes(obj, airportIATACode) {
+        obj.limitedRoutes = this._airportsService.getPossibleRoutes(this._routes, airportIATACode)
+    }
+
+    _swapAirportsInInputs() {
+        const term = this.inputs.departure.selectedAirport;
+        this.inputs.departure.selectedAirport = Object.assign({}, this.inputs.destination.selectedAirport);
+        this.inputs.destination.selectedAirport = Object.assign({}, term);
     }
 
     _updateParentState() {
         this.onChange({
             $event: {
                 airportsCodes: {
-                    destination: this.inputs.destination.selected.iataCode,
-                    departure: this.inputs.departure.selected.iataCode,
+                    destination: this.inputs.destination.selectedAirport.iataCode,
+                    departure: this.inputs.departure.selectedAirport.iataCode,
                 }
             }
         })
     }
 
     _collectAirportsInfo() {
-        this._AirportsService
+        this._airportsService
             .getAirportsInfo()
             .then((response) => {
                 if (!response) { return; }
@@ -79,11 +103,11 @@ class AirportsBoxController {
     }
 
     _updateAvailableAirports() {
-        this.inputs.departure.options = this._AirportsService
-            .getFilteredAirports(this._allAirports, this.inputs.destination.limitedRoutes, this.inputs.departure.filter);
+        this.inputs.departure.options = this._airportsService
+            .getAirports(this._allAirports, this.inputs.destination.limitedRoutes, this.inputs.departure.filter);
 
-        this.inputs.destination.options = this._AirportsService
-            .getFilteredAirports(this._allAirports, this.inputs.departure.limitedRoutes, this.inputs.destination.filter);
+        this.inputs.destination.options = this._airportsService
+            .getAirports(this._allAirports, this.inputs.departure.limitedRoutes, this.inputs.destination.filter);
     }
 
 }

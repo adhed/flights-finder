@@ -20,25 +20,15 @@ class AirportsService {
     return deferred.promise;
   }
 
-  getFilteredAirports(airports = [], limitedRoutes, filterTerm = '') {
+  getAirports(airports = [], limitedRoutes, filterTerm = '') {
     const areLimitedRoutesDefined = !!limitedRoutes && !!limitedRoutes.length;
     const availableAirports = areLimitedRoutesDefined ? 
       this._getAvailableAirports(airports, limitedRoutes) : airports;
     return this._getFilteredAirports(availableAirports, filterTerm);
   }
 
-  getRoutesFromAirport(routes, selectedAirport) {
-    const possibleRoutes = routes[selectedAirport.iataCode];
-    return possibleRoutes.map(iataCode => {
-      return allAirports.find(airport => {
-        return airport.iataCode === iataCode;
-      });
-    });
-  }
-
-  setSelectedAirport(airport = {}) {
-    this._selectedAirportCode = airport.iataCode;
-    this._findMatchingAirports();
+  getPossibleRoutes(routes = {}, airportIATACode) {
+    return routes[airportIATACode];
   }
 
   _getAvailableAirports(airports, routes) {

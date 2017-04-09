@@ -13,11 +13,20 @@ class DateWrapper {
       }
     }
 
-    this.updateParentState();
+    this._updateParentState();
   }
 
-  updateParentState() {
-    console.log('test');
+  handleStartDateChange(event) {
+    this.dates.start.value = event.date;
+    this._updateParentState();
+  }
+
+  handleEndDateChange(event) {
+    this.dates.end.value = event.date;
+    this._updateParentState();
+  }
+
+  _updateParentState(event) {
     this.onChange({ 
       $event: {
         dates: {

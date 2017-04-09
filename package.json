@@ -1,7 +1,8 @@
 {
-  "name": "flights-app",
+  "name": "flights-finder",
   "version": "1.0.1",
-  "description": "",
+  "description": "Simple app for finding cheap flights.",
+  "author": "Adam Rogala adamroweb[at]gmail.com",
   "main": "dist/app.min.js",
   "scripts": {
     "eslint": "eslint",

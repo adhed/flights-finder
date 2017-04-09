@@ -64,10 +64,10 @@ class Results {
         this._flightsService
             .getFlights(params)
             .then(response => {
-                this.areResultsAvailable = true;
                 this.flights = response.flights;
             })
-            .catch(this._onError.bind(this));
+            .catch(this._onError.bind(this))
+            .finally(() => this.areResultsAvailable = true);
     }
 
     _onError(error) {

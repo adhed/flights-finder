@@ -1,11 +1,15 @@
-a.link {
-    border-bottom: 0 !important;
-}
+.home {
+    background-color: #f4f4f4;
+    
+    a.link {
+        border-bottom: 0 !important;
+    }
 
-a.link:hover {
-    border-bottom: 0 !important;
-}
+    a.link:hover {
+        border-bottom: 0 !important;
+    }
 
-table {
-    width: auto !important;
+    table {
+        width: auto !important;
+    }
 }

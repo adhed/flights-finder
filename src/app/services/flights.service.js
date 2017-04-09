@@ -11,22 +11,28 @@ class FlightsService {
 
   getFlights(params = {}) {
     const URL = getFlightsUrl(params);
-    const deffered = this._$q.defer();
+    const deferred = this._$q.defer();
 
     this._$http
       .get(URL)
-      .then(response => {
-        if (!response || !response.data || !response.data.flights) {
-          return;
-          deffered.reject();
-        }
-        deffered.resolve({
-          flights: this._getParsedFlights(response.data.flights)
-        });
-      })
-      .catch(this._onError.bind(this));
-    return deffered.promise;
+      .then(this._onGetFlightsSuccess.bind(this, deferred))
+      .catch(this._onError.bind(this, deferred));
+    return deferred.promise;
   }
+
+  _onGetFlightsSuccess(deferred, response) {
+    const isResponseOk = !!response && !!response.data && !!response.data.flights;
+
+    if (!isResponseOk) {
+      deferred.reject();
+      return;
+    }
+
+    deferred.resolve({
+      flights: this._getParsedFlights(response.data.flights)
+    });
+  }
+
 
   _getParsedFlights(flights = []) {
     return flights
@@ -49,7 +55,8 @@ class FlightsService {
     return 0;
   }
 
-  _onError(error) {
+  _onError(deferred, error) {
+    deferred.reject();
     console.debug("There's a problem with flights request:", error);
   }
 }

@@ -1,12 +1,10 @@
 <div class="airport" ng-click="$ctrl.onClick()">
     <i class="fa fa-plane airport-icon" aria-hidden="true"></i>
     <div class="airport-params">
-        <span class="airport-name">
-            {{ $ctrl.params.name }} 
-            <small>
-                ({{ $ctrl.params.iataCode }})
-            </small>
+        <span class="airport-name" ng-bind-html="$ctrl.parseByFilter($ctrl.params.name)">
         </span>
-        <span class="airport-country">{{ $ctrl.params.country }}</span>
+        <small ng-bind-html="$ctrl.parseByFilter($ctrl.params.iataCode)">
+        </small>
+        <span class="airport-country" ng-bind-html="$ctrl.parseByFilter($ctrl.params.country)"></span>
     </div>
 </div>

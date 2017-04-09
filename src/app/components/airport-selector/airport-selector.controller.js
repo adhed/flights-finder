@@ -25,6 +25,7 @@ class AirportSelector {
         this._shouldBeOptionsVisible = false;
         this._updateShowOptions();
         this.selected = airport.name;
+        this.onFilterChange({ $event: { filter: this.selected } })
         this.onSelect({ $event: { airport } });
     }
 
@@ -41,6 +42,7 @@ class AirportSelector {
 
     _handleBackspace() {
         this.onSelect({ $event: { airport: {} }});
+        this.onFilterChange({ $event: { filter: '' } })
     }
     
     _updateShowOptions() {

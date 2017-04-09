@@ -19,6 +19,7 @@
             ng-show="$ctrl.showOptions">
                 <airport 
                     params="option"
+                    filter="$ctrl.selected"
                     on-click="$ctrl.handleOptionClick(option)"
                     ng-repeat="option in $ctrl.options">
                 </airport>

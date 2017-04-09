@@ -17,6 +17,12 @@
         padding: 0 10px 0 10px;
         color: #6f6f6f;
     }
+
+    .highlighted {
+        color: #3c3b3b;
+        background: rgb(245, 232, 182);
+        font-weight: bold;
+    }
 }
 
 .airport:hover {

@@ -1,9 +1,13 @@
 import template from './airport.html';
+import controller from './airport.controller';
 
 export const airport = {
-    template,
+    controller,
     bindings: {
         params: '<',
-        onClick: '&'
-    }
+        onClick: '&',
+        filter: '<'
+    },
+    template
+    
 }

@@ -41,11 +41,15 @@ class AirportsService {
 
   _getFilteredAirports(airports, filterTerm) {
     const filter = filterTerm.toUpperCase();
-    return airports.filter(airport => {
-      return airport.country.toUpperCase().includes(filter)
-        || airport.iataCode.toUpperCase().includes(filter)
-        || airport.name.toUpperCase().includes(filter);
-    });
+    return airports
+      .filter(this._filterAirportsByTerm.bind(this, filter))
+      .sort(this._compareAirportsByName);
+  }
+
+  _filterAirportsByTerm(filter, airport) {
+    return airport.country.toUpperCase().includes(filter)
+      || airport.iataCode.toUpperCase().includes(filter)
+      || airport.name.toUpperCase().includes(filter);
   }
 
   _onGetAirportsSuccess(deferred, response = {}) {

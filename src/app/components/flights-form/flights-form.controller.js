@@ -1,9 +1,9 @@
 class FlightsForm {
     $onInit() {
         this.form = {
-            airportsCodes: {
-                departure: '',
-                destination: ''
+            airports: {
+                departure: {},
+                destination: {}
             },
             dates: {
                 start: '',
@@ -21,11 +21,11 @@ class FlightsForm {
     }
 
     handleAirportsChange(event = {}) {
-        if (!event.airportsCodes) { return; }
+        if (!event.airports) { return; }
 
-        this.form.airportsCodes = {
-            departure: event.airportsCodes.departure,
-            destination: event.airportsCodes.destination
+        this.form.airports = {
+            departure: event.airports.departure,
+            destination: event.airports.destination
         };
     }
 

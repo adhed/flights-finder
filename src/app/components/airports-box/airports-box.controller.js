@@ -80,9 +80,9 @@ class AirportsBoxController {
     _updateParentState() {
         this.onChange({
             $event: {
-                airportsCodes: {
-                    destination: this.inputs.destination.selectedAirport.iataCode,
-                    departure: this.inputs.departure.selectedAirport.iataCode,
+                airports: {
+                    destination: this.inputs.destination.selectedAirport,
+                    departure: this.inputs.departure.selectedAirport
                 }
             }
         })

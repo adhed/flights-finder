@@ -4,5 +4,5 @@ export const flightsList = {
     template,
     bindings: {
         flights: '<'
-    }
+    },
 }

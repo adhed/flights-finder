@@ -6,7 +6,14 @@
     </div>
     <div class="columns">
         <div class="column">
-             <flights-list flights="$ctrl.flights"></flights-list>
+            <headline
+                show="$ctrl.isFormSubmitted"
+                airports="$ctrl.airports"
+                results-available="!!$ctrl.flights.length">
+            </headline>
+            <flights-list 
+                flights="$ctrl.flights">
+            </flights-list>
         </div>
     </div>
 </div>

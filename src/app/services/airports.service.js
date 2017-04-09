@@ -73,14 +73,27 @@ class AirportsService {
   }
 
   _getParsedAirports(airports = []) {
-    return airports.map(airport => {
-      return {
-        country: airport.country.name,
-        iataCode: airport.iataCode,
-        name: airport.name
-      }
-    });
+    return airports
+      .map(this._mapAirportObject)
+      .sort(this._compareAirportsByName);
   };
+
+  _mapAirportObject(airport) {
+    return {
+      country: airport.country.name,
+      iataCode: airport.iataCode,
+      name: airport.name
+    };
+  }
+
+  _compareAirportsByName(airportOne, airportTwo) {
+    const airportOneName = airportOne.name.toLowerCase();
+    const airportTwoName = airportTwo.name.toLowerCase();
+
+    if (airportOneName < airportTwoName) return -1;
+    if (airportOneName > airportTwoName) return 1;
+    return 0;
+  }
 }
 
 export default AirportsService

@@ -17,6 +17,7 @@ class DateWrapper {
   }
 
   updateParentState() {
+    console.log('test');
     this.onChange({ 
       $event: {
         dates: {

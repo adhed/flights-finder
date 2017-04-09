@@ -1,9 +1,12 @@
 <div class="airport" ng-click="$ctrl.onClick()">
-    <span class="airport-name">
-        {{ $ctrl.params.name }} 
-        <small>
-            ({{ $ctrl.params.iataCode }})
-        </small>
-    </span>
-    <span class="airport-country">{{ $ctrl.params.country }}</span>
+    <i class="fa fa-plane airport-icon" aria-hidden="true"></i>
+    <div class="airport-params">
+        <span class="airport-name">
+            {{ $ctrl.params.name }} 
+            <small>
+                ({{ $ctrl.params.iataCode }})
+            </small>
+        </span>
+        <span class="airport-country">{{ $ctrl.params.country }}</span>
+    </div>
 </div>

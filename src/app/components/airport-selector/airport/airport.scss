@@ -1,10 +1,20 @@
 .airport {
     cursor: pointer;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin: 3px 0 3px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eaeaea;
+    outline: none;
 
     .airport-country {
         display: block;
         font-style: italic;
+    }
+
+    .airport-icon {
+        padding: 0 10px 0 10px;
+        color: #6f6f6f;
     }
 }
 

@@ -12,7 +12,7 @@ class FlightsForm {
         };
     }
 
-    handleButtonClick() {
+    handleSubmit() {
         this.onSubmit({
             $event: {
                 form: this.form

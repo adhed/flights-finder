@@ -8,6 +8,7 @@
             ng-model="$ctrl.selected"
             ng-click="$ctrl.handleInputClick()"
             placeholder="Choose airport..."
+            required
             ng-change="$ctrl.onFilterChange({ $event: { filter: $ctrl.selected } })"/>
         <div 
             class="options" 
@@ -18,5 +19,4 @@
                     ng-repeat="option in $ctrl.options">
                 </airport>
         </div>
-        Airports: {{ $ctrl.options.length }}
 </div>

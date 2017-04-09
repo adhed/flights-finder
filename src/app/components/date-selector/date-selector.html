@@ -9,6 +9,8 @@
             <md-datepicker 
                 md-open-on-focus="true"
                 md-hide-icons="calendar"
+                md-min-date="$ctrl.minDate"
+                md-max-date="$ctrl.maxDate"
                 required
                 ng-change="$ctrl.onChange({ $event: { date: $ctrl.date } })"
                 ng-model="$ctrl.date">

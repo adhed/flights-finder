@@ -1,4 +1,13 @@
 class DatesService {
+    getDateWithOffset(dayOffset = 0) {
+        const currentDate = new Date();
+        return new Date(currentDate.setDate(currentDate.getDate() + dayOffset));
+    }
+
+    getParsedISODate(date = new Date()) {
+        return date.toISOString().slice(0, 10);
+    }
+    
     getFormatedDate(dateInISO) {
         const { day, month, hour, minute, year } = this._getParsedDateParams(dateInISO);
         return `${day}-${month}-${year} ${hour}:${minute}`;

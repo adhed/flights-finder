@@ -6,7 +6,9 @@ export const dateSelectorComponent = {
     placeHolder: '<',
     label: '<',
     date: '<',
-    onChange: '&'
+    onChange: '&',
+    minDate: '<',
+    maxDate: '<'
   },
   template,
   controller

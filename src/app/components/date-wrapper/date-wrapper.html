@@ -3,17 +3,19 @@
     <div flex-gt-xs="45" flex-xs="grow">
       <date-selector 
         placeholder="$ctrl.dates.start.placeholder"
+        max-date="$ctrl.dates.end.value"
         label="$ctrl.dates.start.label"
         date="$ctrl.dates.start.value"
         on-change="$ctrl.handleStartDateChange($event)">
       </date-selector>
     </div>
 
-    <div flex-xs="grow" show-xs>&ensp;</div>
+    <div flex-xs="grow" flex-gt-xs="10">&ensp;</div>
 
-    <div flex-offset-gt-xs="10" flex-gt-xs="45" flex-xs="grow">
+    <div flex-gt-xs="45" flex-xs="grow">
       <date-selector 
         placeholder="$ctrl.dates.end.placeholder"
+        min-date="$ctrl.dates.start.value"
         label="$ctrl.dates.end.label"
         date="$ctrl.dates.end.value"
         on-change="$ctrl.handleEndDateChange($event)">

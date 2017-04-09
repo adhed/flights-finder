@@ -1,5 +1,12 @@
 class DateWrapper {
+  constructor(DatesService) {
+    'ngInject';
+
+    this._datesService = DatesService;
+  }
+
   $onInit() {
+
     this.dates = {
       start: {
         label: 'Fly out:',
@@ -7,7 +14,7 @@ class DateWrapper {
       },
       end: {
         label: 'Fly back:',
-        value: this._getTomorrowDate() 
+        value: this._datesService.getDateWithOffset(7)
       }
     }
 
@@ -28,20 +35,11 @@ class DateWrapper {
     this.onChange({ 
       $event: {
         dates: {
-          end: this._getParsedDate(this.dates.end.value),
-          start: this._getParsedDate(this.dates.start.value)
+          end: this._datesService.getParsedISODate(this.dates.end.value),
+          start: this._datesService.getParsedISODate(this.dates.start.value)
         }
       }
     });
-  }
-
-  _getParsedDate(date = new Date()) {
-    return date.toISOString().slice(0, 10);
-  }
-
-  _getTomorrowDate() {
-    let currentDate = new Date();
-    return new Date(currentDate.setDate(currentDate.getDate() + 1));
   }
 }
 

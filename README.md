@@ -1,21 +1,21 @@
 # Flights app
 
-## Development
+## Demo
 
-Create a JS bundle with Webpack::
+https://adhed.github.io/flights-finder/dist
 
-  $ npm run build
+# How to run
 
-Start the Webpack development server on 'localhost:3000'::
+* Install GIT
+* Install NodeJS
+* Install npm
+* Type in console:
+```
+git clone https://github.com/adhed/flights-finder.git
 
-  $ npm run dev
-
-Run tests::
-
-  $ npm run test
-
-Linting::
-
-  $ npm run lint
-
+cd flights-finder
+npm install
+npm start
+```
+* Open localhost:3000 in the browser
 

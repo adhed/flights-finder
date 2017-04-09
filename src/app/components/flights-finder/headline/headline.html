@@ -1,11 +1,11 @@
 <div class="headline" ng-show="$ctrl.show">
-    <span class="form-result" ng-show="$ctrl.resultsAvailable">
-    Found flights from 
+    <span class="form-result" ng-show="!!$ctrl.flightsLength">
+    Found {{ $ctrl.flightsLength }} {{ $ctrl.flightsLength === 1 ? 'flight' : 'flights' }} from 
         <strong>{{ $ctrl.airports.departure }}</strong>
             to 
         <strong>{{ $ctrl.airports.destination }}</strong>:
     </span>
-    <span class="form-result" ng-show="!$ctrl.resultsAvailable">
-        There aren't any flights with chosen criterias.
+    <span class="form-result" ng-show="!$ctrl.flightsLength">
+        There aren't any flights with chosen criteria.
     </span>
 </div>

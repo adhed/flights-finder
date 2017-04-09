@@ -1,16 +1,8 @@
 <div class="flights-form">
-    <form  ng-submit="$ctrl.handleSubmit()" autocomplete="off">
-        <div class="columns">
-            <div class="column">
-                <airports-box on-change="$ctrl.handleAirportsChange($event)"></airports-box>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <date-wrapper on-change="$ctrl.handleDateChange($event)"></date-wrapper>
-            </div>
-        </div>
-        <div class="column is-6 is-offset-3">
+    <form ng-submit="$ctrl.handleSubmit()" autocomplete="off">
+        <airports-box on-change="$ctrl.handleAirportsChange($event)"></airports-box>
+        <date-wrapper on-change="$ctrl.handleDateChange($event)"></date-wrapper>
+        <div flex="66">
             <button class="primary" type="submit">Find flights</button>
         </div>
     </form>

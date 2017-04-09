@@ -4,7 +4,7 @@ export const headline = {
     template,
     bindings: {
         show: '<',
-        resultsAvailable: '<',
+        flightsLength: '<',
         airports: '<'
     }
 }

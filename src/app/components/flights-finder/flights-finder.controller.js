@@ -7,7 +7,12 @@ class FlightsFinder {
 
     $onInit() {
         this.isFormSubmitted = false;
-        this.flights = [];
+        this.flights = [{
+            dateTo: '20-05-2017',
+            dateFrom: '21-05-2017',
+            currency: '$',
+            price: '216.54'
+        }];
         this.airports = {
             destination: '',
             departure: ''

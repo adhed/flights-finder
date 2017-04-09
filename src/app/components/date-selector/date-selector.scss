@@ -1,6 +1,22 @@
 .date-selector {
     background: whitesmoke;
     padding: 5px;
-    border: 1px solid gray;
-    height: 60px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: 1px solid #5d5959;
+
+    .calendar {
+        margin-left: 10px;
+    }
+
+    label {
+        margin: 0 10px 0 10px;
+    }
+
+    .date-picker-wrapper {
+        margin-top: 5px;
+        margin-left: 15px;
+    }
 }

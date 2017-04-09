@@ -1,4 +1,33 @@
 .flight {
-    background: gray;
-    margin: 10px;
+    margin: 10px 0 10px 0;
+    border: 1px solid #e2e1e1;
+    padding: 30px;
+    border-radius: 10px;
+
+    .price {
+        float: right;
+        display: flex;
+        align-items: center;
+
+        i {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        strong {
+            font-size: 1.4em;   
+            text-decoration: underline;
+            color: #da0f0f;             
+        }
+    }
+
+    .date-info {
+        display: inline-block;
+    }
+
+     .date-to {
+        i {
+            transform: rotate(180deg);
+        }
+    }
 }

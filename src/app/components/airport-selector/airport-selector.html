@@ -1,8 +1,11 @@
 <div 
     class="airport-selector" 
     click-outside="$ctrl.handleClickOutside()">
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
-        <label ng-bind="$ctrl.label"></label>
+        <div class="label-wrapper">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <label ng-bind="$ctrl.label"></label>
+        </div>
+        
         <input 
             type="text" 
             ng-model="$ctrl.selected"

@@ -1,19 +1,15 @@
-<div class="flights-finder column">
-    <div class="columns">
-        <div class="column">
-             <flights-form on-submit="$ctrl.handleFormSubmit($event)"></flights-form>
-        </div>
+<div class="flights-finder">
+    <div flex="grow">
+        <flights-form on-submit="$ctrl.handleFormSubmit($event)"></flights-form>
     </div>
-    <div class="columns">
-        <div class="column">
-            <headline
-                show="$ctrl.isFormSubmitted"
-                airports="$ctrl.airports"
-                results-available="!!$ctrl.flights.length">
-            </headline>
-            <flights-list 
-                flights="$ctrl.flights">
-            </flights-list>
-        </div>
+    <div flex="grow">
+        <headline
+            show="$ctrl.isFormSubmitted"
+            airports="$ctrl.airports"
+            flights-length="$ctrl.flights.length">
+        </headline>
+        <flights-list 
+            flights="$ctrl.flights">
+        </flights-list>
     </div>
 </div>

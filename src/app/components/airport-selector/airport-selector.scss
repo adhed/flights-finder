@@ -1,19 +1,39 @@
 .airport-selector {
-    float: left;
-    background: #bcd4e6;
-    border: 1px solid #5d5959;
-    box-sizing: border-box;
-    border-radius: 5px 5px 0 0;
-    padding-top: 5px;
     position: relative;
-    width: 100%;
 
-    i {
-        padding: 0 5px 0 10px;
+    .label-wrapper {
+        box-sizing: border-box;
+        background: #bcd4e6;
+        border: 1px solid #5d5959;
+        border-bottom: 0;
+        width: 40%;
+        border-radius: 5px 5px 0 0;
+        padding: 5px 10px 5px 0;
+
+            i {
+                padding: 0 10px 0 10px;
+                float: left;
+            }
+
+            label {
+                color: black;
+            }
     }
 
-    label {
-        color: black;
+    input {
+        padding: 15px;
+        color: #073590;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 0;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid #5d5959;
+    }
+
+    input:focus {
+        background: lightgray;
     }
 
     .options {

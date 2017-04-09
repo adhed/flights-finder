@@ -2,13 +2,11 @@ class DateWrapper {
   $onInit() {
     this.dates = {
       start: {
-        placeholder: 'Fly out',
         label: 'Fly out:',
         value: new Date()
       },
       end: {
-        placeholder: 'Back',
-        label: 'Back:',
+        label: 'Fly back:',
         value: this._getTomorrowDate() 
       }
     }

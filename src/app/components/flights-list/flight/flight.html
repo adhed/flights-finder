@@ -1,5 +1,14 @@
-<div class="flight box">
-    <h2>{{ $ctrl.flight.currency }}{{ $ctrl.flight.price }}</h2>
-    <span>{{ $ctrl.flight.dateFrom }}</span>
-    <span>{{ $ctrl.flight.dateTo }}</span>
+<div class="flight">
+    <div class="date-info date-from">
+        <i class="fa fa-plane" aria-hidden="true"></i>
+        <span>{{ $ctrl.flight.dateFrom }}</span>
+    </div>
+    <div class="date-info date-info date-to">
+        <i class="fa fa-plane" aria-hidden="true"></i>
+        <span>{{ $ctrl.flight.dateTo }}</span>
+    </div>
+    <div class="price">
+        <i class="fa fa-credit-card" aria-hidden="true"></i>
+        <strong>{{ $ctrl.flight.currency }}{{ $ctrl.flight.price | number:2 }}</strong>                            
+    </div>
 </div>

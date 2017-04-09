@@ -1,6 +1,6 @@
 <div class="airports-box">
-    <div class="columns">
-        <div class="column is-5">
+    <div layout="row">
+        <div flex="45">
             <airport-selector 
                 label="$ctrl.inputs.departure.label"
                 selected="$ctrl.inputs.departure.selectedAirport.name"
@@ -10,16 +10,20 @@
             </airport-selector>
         </div>
         
-        <div class="column is-2">
-            <a href="#" class="link" title="Swap locations">
-                    <i 
-                        class="fa fa-exchange exchange"
-                        ng-click="$ctrl.handleSwapButtonClick()" 
-                        aria-hidden="true"></i>
-            </a>
+        <div flex="10" >
+            <div layout="row" layout-align="center center">
+                <div class="swap-wrapper">
+                    <a href="#" class="link" title="Swap locations">
+                        <i 
+                            class="fa fa-exchange exchange"
+                            ng-click="$ctrl.handleSwapButtonClick()" 
+                            aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
         </div>
         
-        <div class="column is-5">
+        <div flex="45">
             <airport-selector
                 label="$ctrl.inputs.destination.label"
                 selected="$ctrl.inputs.destination.selectedAirport.name"
@@ -28,5 +32,6 @@
                 options="$ctrl.inputs.destination.options">
             </airport-selector>
         </div>
+    </div>
     </div>
 </div>

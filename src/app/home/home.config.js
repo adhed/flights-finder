@@ -2,11 +2,10 @@ export const homeConfig = ($stateProvider, $urlRouterProvider) => {
     'ngInject';
 
     $stateProvider
-     .state('home', {
+     .state('app.home', {
          url: '/',
          component: 'home'
     });
 
     $urlRouterProvider.otherwise('/');
-
 }

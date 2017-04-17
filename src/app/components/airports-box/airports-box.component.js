@@ -5,6 +5,8 @@ export const airportsBox = {
     template,
     controller,
     bindings: {
-        onChange: '&'
+        onChange: '&',
+        allAirports: '<',
+        routes: '<'
     }
 }

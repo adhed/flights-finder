@@ -1,12 +1,16 @@
 class FlightsForm {
-    constructor($state, $location) {
+    constructor($state, $location, AirportsService) {
         'ngInject';
 
         this._state = $state;
         this._$location = $location;
+        this._airportsService = AirportsService;
     }
 
     $onInit() {
+        this.loaded = false;
+        this.airports = [];
+        this.routes = {};
         this.form = {
             airports: {
                 departure: {},
@@ -17,11 +21,28 @@ class FlightsForm {
                 end: ''
             }
         };
+
+        this._collectAirportsInfo();
+    }
+
+     _collectAirportsInfo() {
+        this._airportsService
+            .getAirportsInfo()
+            .then((response) => {
+                if (!response) { return; }
+                this.airports = response.airports;
+                this.routes = response.routes;
+            })
+            .catch((error) => {
+                console.debug("Problem with getting airports info:", error);
+            })
+            .finally(() => {
+                this.loaded = true;
+            });
     }
 
     handleSubmit() {
-        console.log('submit');
-        this._state.transitionTo('home.flights', {
+        this._state.transitionTo('app.home.flights', {
             codeFrom: this.form.airports.departure.iataCode,
             codeTo: this.form.airports.destination.iataCode,
             nameTo: this.form.airports.destination.name,

@@ -1,9 +1,14 @@
 <div class="flights-form" ng-cloak>
-    <form ng-submit="$ctrl.handleSubmit()" autocomplete="off">
-        <airports-box on-change="$ctrl.handleAirportsChange($event)"></airports-box>
+    <form ng-if="$ctrl.loaded" ng-submit="$ctrl.handleSubmit()" autocomplete="off">
+        <airports-box 
+            all-airports="$ctrl.airports"
+            routes="$ctrl.routes"
+            on-change="$ctrl.handleAirportsChange($event)">
+        </airports-box>
         <date-wrapper on-change="$ctrl.handleDateChange($event)"></date-wrapper>
         <div flex="66">
             <button class="primary" type="submit">Find flights</button>
         </div>
     </form>
+    <spinner show="!$ctrl.loaded"></spinner>
 </div>

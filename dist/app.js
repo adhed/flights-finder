@@ -12,29 +12,29 @@ webpackJsonp([0],[
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _components = __webpack_require__(17);
+	var _components = __webpack_require__(86);
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	var _services = __webpack_require__(214);
+	var _services = __webpack_require__(283);
 	
 	var _services2 = _interopRequireDefault(_services);
 	
-	var _directives = __webpack_require__(219);
+	var _directives = __webpack_require__(288);
 	
 	var _directives2 = _interopRequireDefault(_directives);
 	
-	var _app = __webpack_require__(221);
+	var _app = __webpack_require__(290);
 	
-	var _home = __webpack_require__(222);
+	var _home = __webpack_require__(291);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
-	__webpack_require__(228);
+	__webpack_require__(297);
 	
-	__webpack_require__(238);
+	__webpack_require__(307);
 	
-	__webpack_require__(239);
+	__webpack_require__(308);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -59,7 +59,76 @@ webpackJsonp([0],[
 /* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -72,11 +141,11 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _topBar = __webpack_require__(18);
+	var _topBar = __webpack_require__(87);
 	
 	var _topBar2 = _interopRequireDefault(_topBar);
 	
-	var _flightsFinder = __webpack_require__(25);
+	var _flightsFinder = __webpack_require__(94);
 	
 	var _flightsFinder2 = _interopRequireDefault(_flightsFinder);
 	
@@ -87,7 +156,7 @@ webpackJsonp([0],[
 	exports.default = _angular2.default.module('app.components', requirements).name;
 
 /***/ },
-/* 18 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -100,16 +169,16 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _topBar = __webpack_require__(19);
+	var _topBar = __webpack_require__(88);
 	
-	__webpack_require__(21);
+	__webpack_require__(90);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.topBar', []).component('topBar', _topBar.topBar).name;
 
 /***/ },
-/* 19 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -119,7 +188,7 @@ webpackJsonp([0],[
 	});
 	exports.topBar = undefined;
 	
-	var _topBar = __webpack_require__(20);
+	var _topBar = __webpack_require__(89);
 	
 	var _topBar2 = _interopRequireDefault(_topBar);
 	
@@ -130,22 +199,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 20 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"top-bar\">\r\n    <div class=\"slogan\">\r\n        <i class=\"fa fa-plane\" aria-hidden=\"true\"></i>\r\n        <h1>Cheap flights finder</h1>\r\n    </div>\r\n</div>\r\n\r\n"
 
 /***/ },
-/* 21 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(22);
+	var content = __webpack_require__(91);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -162,10 +231,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 22 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -176,9 +245,9 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 23 */,
-/* 24 */,
-/* 25 */
+/* 92 */,
+/* 93 */,
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -191,24 +260,24 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _flightsFinder = __webpack_require__(26);
+	var _flightsFinder = __webpack_require__(95);
 	
-	var _flightsForm = __webpack_require__(28);
+	var _flightsForm = __webpack_require__(97);
 	
 	var _flightsForm2 = _interopRequireDefault(_flightsForm);
 	
-	var _results = __webpack_require__(192);
+	var _results = __webpack_require__(261);
 	
 	var _results2 = _interopRequireDefault(_results);
 	
-	__webpack_require__(212);
+	__webpack_require__(281);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.flightsFinder', [_flightsForm2.default, _results2.default]).component('flightsFinder', _flightsFinder.flightsFinder).name;
 
 /***/ },
-/* 26 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -218,7 +287,7 @@ webpackJsonp([0],[
 	});
 	exports.flightsFinder = undefined;
 	
-	var _flightsFinder = __webpack_require__(27);
+	var _flightsFinder = __webpack_require__(96);
 	
 	var _flightsFinder2 = _interopRequireDefault(_flightsFinder);
 	
@@ -229,13 +298,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 27 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"flights-finder\">\r\n    <div>\r\n        <div flex=\"grow\">\r\n            <flights-form on-submit=\"$ctrl.handleFormSubmit($event)\"></flights-form>\r\n        </div>\r\n        <div flex=\"grow\">\r\n            <ui-view></ui-view>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 28 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -248,28 +317,28 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _flightsForm = __webpack_require__(29);
+	var _flightsForm = __webpack_require__(98);
 	
-	var _airportsBox = __webpack_require__(32);
+	var _airportsBox = __webpack_require__(101);
 	
 	var _airportsBox2 = _interopRequireDefault(_airportsBox);
 	
-	var _dateWrapper = __webpack_require__(51);
+	var _dateWrapper = __webpack_require__(120);
 	
 	var _dateWrapper2 = _interopRequireDefault(_dateWrapper);
 	
-	var _spinner = __webpack_require__(187);
+	var _spinner = __webpack_require__(256);
 	
 	var _spinner2 = _interopRequireDefault(_spinner);
 	
-	__webpack_require__(190);
+	__webpack_require__(259);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.flightsForm', [_airportsBox2.default, _dateWrapper2.default, _spinner2.default]).component('flightsForm', _flightsForm.flightsForm).name;
 
 /***/ },
-/* 29 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -279,11 +348,11 @@ webpackJsonp([0],[
 	});
 	exports.flightsForm = undefined;
 	
-	var _flightsForm = __webpack_require__(30);
+	var _flightsForm = __webpack_require__(99);
 	
 	var _flightsForm2 = _interopRequireDefault(_flightsForm);
 	
-	var _flightsForm3 = __webpack_require__(31);
+	var _flightsForm3 = __webpack_require__(100);
 	
 	var _flightsForm4 = _interopRequireDefault(_flightsForm3);
 	
@@ -298,13 +367,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 30 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"flights-form\" ng-cloak>\r\n    <form ng-if=\"$ctrl.loaded\" ng-submit=\"$ctrl.handleSubmit()\" autocomplete=\"off\">\r\n        <airports-box \r\n            all-airports=\"$ctrl.airports\"\r\n            routes=\"$ctrl.routes\"\r\n            on-change=\"$ctrl.handleAirportsChange($event)\">\r\n        </airports-box>\r\n        <date-wrapper on-change=\"$ctrl.handleDateChange($event)\"></date-wrapper>\r\n        <div flex=\"66\">\r\n            <button class=\"primary\" type=\"submit\">Find flights</button>\r\n        </div>\r\n    </form>\r\n    <spinner show=\"!$ctrl.loaded\"></spinner>\r\n</div>"
 
 /***/ },
-/* 31 */
+/* 100 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -408,7 +477,7 @@ webpackJsonp([0],[
 	exports.default = FlightsForm;
 
 /***/ },
-/* 32 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -421,20 +490,20 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _airportsBox = __webpack_require__(33);
+	var _airportsBox = __webpack_require__(102);
 	
-	var _airportSelector = __webpack_require__(36);
+	var _airportSelector = __webpack_require__(105);
 	
 	var _airportSelector2 = _interopRequireDefault(_airportSelector);
 	
-	__webpack_require__(49);
+	__webpack_require__(118);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.airportsBox', [_airportSelector2.default]).component('airportsBox', _airportsBox.airportsBox).name;
 
 /***/ },
-/* 33 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -444,11 +513,11 @@ webpackJsonp([0],[
 	});
 	exports.airportsBox = undefined;
 	
-	var _airportsBox = __webpack_require__(34);
+	var _airportsBox = __webpack_require__(103);
 	
 	var _airportsBox2 = _interopRequireDefault(_airportsBox);
 	
-	var _airportsBox3 = __webpack_require__(35);
+	var _airportsBox3 = __webpack_require__(104);
 	
 	var _airportsBox4 = _interopRequireDefault(_airportsBox3);
 	
@@ -465,13 +534,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 34 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"airports-box\">\r\n    <div layout-gt-xs=\"row\" layout-xs=\"column\">\r\n        <div flex-xs=\"grow\" flex-gt-xs=\"45\">\r\n            <airport-selector \r\n                label=\"$ctrl.inputs.departure.label\"\r\n                selected=\"$ctrl.inputs.departure.selectedAirport.name\"\r\n                on-filter-change=\"$ctrl.handleDepartureFilterChange($event)\"\r\n                on-select=\"$ctrl.handleDepartureAirportSelect($event)\"\r\n                options=\"$ctrl.inputs.departure.options\">\r\n            </airport-selector>\r\n        </div>\r\n        \r\n        <div flex-xs=\"grow\" flex-gt-xs=\"10\" >\r\n            <div layout=\"column\"\r\n                 class=\"swap-wrapper\"\r\n                 layout-padding\r\n                 layout-align-gt-xs=\"center center\">\r\n                    <div>\r\n                        <a href=\"#\" class=\"link\" title=\"Swap locations\">\r\n                            <i class=\"fa fa-exchange exchange\"\r\n                               ng-click=\"$ctrl.handleSwapButtonClick()\" \r\n                               aria-hidden=\"true\"></i>\r\n                        </a>\r\n                    </div>\r\n            </div>\r\n        </div>\r\n        \r\n        <div flex-xs=\"grow\" flex-gt-xs=\"45\">\r\n            <airport-selector\r\n                label=\"$ctrl.inputs.destination.label\"\r\n                selected=\"$ctrl.inputs.destination.selectedAirport.name\"\r\n                on-filter-change=\"$ctrl.handleDestinationFilterChange($event)\"\r\n                on-select=\"$ctrl.handleDestinationAirportSelect($event)\"\r\n                options=\"$ctrl.inputs.destination.options\">\r\n            </airport-selector>\r\n        </div>\r\n    </div>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 35 */
+/* 104 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -585,7 +654,7 @@ webpackJsonp([0],[
 	exports.default = AirportsBoxController;
 
 /***/ },
-/* 36 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -598,20 +667,20 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _airportSelector = __webpack_require__(37);
+	var _airportSelector = __webpack_require__(106);
 	
-	var _airport = __webpack_require__(41);
+	var _airport = __webpack_require__(110);
 	
 	var _airport2 = _interopRequireDefault(_airport);
 	
-	__webpack_require__(47);
+	__webpack_require__(116);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.airportSelector', [_airport2.default]).component('airportSelector', _airportSelector.airportSelector).name;
 
 /***/ },
-/* 37 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -621,11 +690,11 @@ webpackJsonp([0],[
 	});
 	exports.airportSelector = undefined;
 	
-	var _airportSelector = __webpack_require__(38);
+	var _airportSelector = __webpack_require__(107);
 	
 	var _airportSelector2 = _interopRequireDefault(_airportSelector);
 	
-	var _airportSelector3 = __webpack_require__(39);
+	var _airportSelector3 = __webpack_require__(108);
 	
 	var _airportSelector4 = _interopRequireDefault(_airportSelector3);
 	
@@ -644,13 +713,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 38 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = "<div \r\n    class=\"airport-selector\" \r\n    click-outside=\"$ctrl.handleClickOutside()\">\r\n        <div class=\"label-wrapper\">\r\n            <i class=\"fa fa-map-marker\" hide-xs aria-hidden=\"true\"></i>\r\n            <label>{{ $ctrl.label }}:</label>\r\n        </div>\r\n        \r\n        <input \r\n            type=\"text\" \r\n            ng-model=\"$ctrl.selected\"\r\n            ng-click=\"$ctrl.handleInputClick()\"\r\n            placeholder=\"Choose your {{ $ctrl.label  }} Airport\"\r\n            ng-keydown=\"$ctrl.handleKeyDown($event)\"\r\n            required\r\n            ng-change=\"$ctrl.onFilterChange({ $event: { filter: $ctrl.selected } })\"/>\r\n        <div \r\n            class=\"options\" \r\n            ng-show=\"$ctrl.showOptions\">\r\n                <airport \r\n                    params=\"option\"\r\n                    filter=\"$ctrl.selected\"\r\n                    on-click=\"$ctrl.handleOptionClick(option)\"\r\n                    ng-repeat=\"option in $ctrl.options\">\r\n                </airport>\r\n        </div>\r\n</div>\r\n"
 
 /***/ },
-/* 39 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -659,7 +728,7 @@ webpackJsonp([0],[
 	    value: true
 	});
 	
-	var _utils = __webpack_require__(40);
+	var _utils = __webpack_require__(109);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -722,7 +791,7 @@ webpackJsonp([0],[
 	exports.default = AirportSelector;
 
 /***/ },
-/* 40 */
+/* 109 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -746,7 +815,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 41 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -759,16 +828,16 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _airport = __webpack_require__(42);
+	var _airport = __webpack_require__(111);
 	
-	__webpack_require__(45);
+	__webpack_require__(114);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.airport', []).component('airport', _airport.airport).name;
 
 /***/ },
-/* 42 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -778,11 +847,11 @@ webpackJsonp([0],[
 	});
 	exports.airport = undefined;
 	
-	var _airport = __webpack_require__(43);
+	var _airport = __webpack_require__(112);
 	
 	var _airport2 = _interopRequireDefault(_airport);
 	
-	var _airport3 = __webpack_require__(44);
+	var _airport3 = __webpack_require__(113);
 	
 	var _airport4 = _interopRequireDefault(_airport3);
 	
@@ -800,13 +869,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 43 */
+/* 112 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"airport\" ng-click=\"$ctrl.onClick()\">\r\n    <i class=\"fa fa-plane airport-icon\" aria-hidden=\"true\"></i>\r\n    <div class=\"airport-params\">\r\n        <span class=\"airport-name\" ng-bind-html=\"$ctrl.parseByFilter($ctrl.params.name)\">\r\n        </span>\r\n        <small ng-bind-html=\"$ctrl.parseByFilter($ctrl.params.iataCode)\">\r\n        </small>\r\n        <span class=\"airport-country\" ng-bind-html=\"$ctrl.parseByFilter($ctrl.params.country)\"></span>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 44 */
+/* 113 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -853,16 +922,16 @@ webpackJsonp([0],[
 	exports.default = Airport;
 
 /***/ },
-/* 45 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(46);
+	var content = __webpack_require__(115);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -879,10 +948,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 46 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -893,16 +962,16 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 47 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(117);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -919,10 +988,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 48 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -933,16 +1002,16 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 49 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(50);
+	var content = __webpack_require__(119);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -959,10 +1028,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 50 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -973,7 +1042,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 51 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -986,259 +1055,259 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _moment = __webpack_require__(52);
+	var _moment = __webpack_require__(121);
 	
 	var _moment2 = _interopRequireDefault(_moment);
 	
-	var _dateWrapper = __webpack_require__(170);
+	var _dateWrapper = __webpack_require__(239);
 	
-	var _dateSelector = __webpack_require__(173);
+	var _dateSelector = __webpack_require__(242);
 	
 	var _dateSelector2 = _interopRequireDefault(_dateSelector);
 	
-	__webpack_require__(185);
+	__webpack_require__(254);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.dateWrapper', [_dateSelector2.default]).component('dateWrapper', _dateWrapper.dateWrapperComponent).name;
 
 /***/ },
-/* 52 */,
-/* 53 */,
-/* 54 */
+/* 121 */,
+/* 122 */,
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./af": 55,
-		"./af.js": 55,
-		"./ar": 56,
-		"./ar-dz": 57,
-		"./ar-dz.js": 57,
-		"./ar-kw": 58,
-		"./ar-kw.js": 58,
-		"./ar-ly": 59,
-		"./ar-ly.js": 59,
-		"./ar-ma": 60,
-		"./ar-ma.js": 60,
-		"./ar-sa": 61,
-		"./ar-sa.js": 61,
-		"./ar-tn": 62,
-		"./ar-tn.js": 62,
-		"./ar.js": 56,
-		"./az": 63,
-		"./az.js": 63,
-		"./be": 64,
-		"./be.js": 64,
-		"./bg": 65,
-		"./bg.js": 65,
-		"./bn": 66,
-		"./bn.js": 66,
-		"./bo": 67,
-		"./bo.js": 67,
-		"./br": 68,
-		"./br.js": 68,
-		"./bs": 69,
-		"./bs.js": 69,
-		"./ca": 70,
-		"./ca.js": 70,
-		"./cs": 71,
-		"./cs.js": 71,
-		"./cv": 72,
-		"./cv.js": 72,
-		"./cy": 73,
-		"./cy.js": 73,
-		"./da": 74,
-		"./da.js": 74,
-		"./de": 75,
-		"./de-at": 76,
-		"./de-at.js": 76,
-		"./de-ch": 77,
-		"./de-ch.js": 77,
-		"./de.js": 75,
-		"./dv": 78,
-		"./dv.js": 78,
-		"./el": 79,
-		"./el.js": 79,
-		"./en-au": 80,
-		"./en-au.js": 80,
-		"./en-ca": 81,
-		"./en-ca.js": 81,
-		"./en-gb": 82,
-		"./en-gb.js": 82,
-		"./en-ie": 83,
-		"./en-ie.js": 83,
-		"./en-nz": 84,
-		"./en-nz.js": 84,
-		"./eo": 85,
-		"./eo.js": 85,
-		"./es": 86,
-		"./es-do": 87,
-		"./es-do.js": 87,
-		"./es.js": 86,
-		"./et": 88,
-		"./et.js": 88,
-		"./eu": 89,
-		"./eu.js": 89,
-		"./fa": 90,
-		"./fa.js": 90,
-		"./fi": 91,
-		"./fi.js": 91,
-		"./fo": 92,
-		"./fo.js": 92,
-		"./fr": 93,
-		"./fr-ca": 94,
-		"./fr-ca.js": 94,
-		"./fr-ch": 95,
-		"./fr-ch.js": 95,
-		"./fr.js": 93,
-		"./fy": 96,
-		"./fy.js": 96,
-		"./gd": 97,
-		"./gd.js": 97,
-		"./gl": 98,
-		"./gl.js": 98,
-		"./gom-latn": 99,
-		"./gom-latn.js": 99,
-		"./he": 100,
-		"./he.js": 100,
-		"./hi": 101,
-		"./hi.js": 101,
-		"./hr": 102,
-		"./hr.js": 102,
-		"./hu": 103,
-		"./hu.js": 103,
-		"./hy-am": 104,
-		"./hy-am.js": 104,
-		"./id": 105,
-		"./id.js": 105,
-		"./is": 106,
-		"./is.js": 106,
-		"./it": 107,
-		"./it.js": 107,
-		"./ja": 108,
-		"./ja.js": 108,
-		"./jv": 109,
-		"./jv.js": 109,
-		"./ka": 110,
-		"./ka.js": 110,
-		"./kk": 111,
-		"./kk.js": 111,
-		"./km": 112,
-		"./km.js": 112,
-		"./kn": 113,
-		"./kn.js": 113,
-		"./ko": 114,
-		"./ko.js": 114,
-		"./ky": 115,
-		"./ky.js": 115,
-		"./lb": 116,
-		"./lb.js": 116,
-		"./lo": 117,
-		"./lo.js": 117,
-		"./lt": 118,
-		"./lt.js": 118,
-		"./lv": 119,
-		"./lv.js": 119,
-		"./me": 120,
-		"./me.js": 120,
-		"./mi": 121,
-		"./mi.js": 121,
-		"./mk": 122,
-		"./mk.js": 122,
-		"./ml": 123,
-		"./ml.js": 123,
-		"./mr": 124,
-		"./mr.js": 124,
-		"./ms": 125,
-		"./ms-my": 126,
-		"./ms-my.js": 126,
-		"./ms.js": 125,
-		"./my": 127,
-		"./my.js": 127,
-		"./nb": 128,
-		"./nb.js": 128,
-		"./ne": 129,
-		"./ne.js": 129,
-		"./nl": 130,
-		"./nl-be": 131,
-		"./nl-be.js": 131,
-		"./nl.js": 130,
-		"./nn": 132,
-		"./nn.js": 132,
-		"./pa-in": 133,
-		"./pa-in.js": 133,
-		"./pl": 134,
-		"./pl.js": 134,
-		"./pt": 135,
-		"./pt-br": 136,
-		"./pt-br.js": 136,
-		"./pt.js": 135,
-		"./ro": 137,
-		"./ro.js": 137,
-		"./ru": 138,
-		"./ru.js": 138,
-		"./sd": 139,
-		"./sd.js": 139,
-		"./se": 140,
-		"./se.js": 140,
-		"./si": 141,
-		"./si.js": 141,
-		"./sk": 142,
-		"./sk.js": 142,
-		"./sl": 143,
-		"./sl.js": 143,
-		"./sq": 144,
-		"./sq.js": 144,
-		"./sr": 145,
-		"./sr-cyrl": 146,
-		"./sr-cyrl.js": 146,
-		"./sr.js": 145,
-		"./ss": 147,
-		"./ss.js": 147,
-		"./sv": 148,
-		"./sv.js": 148,
-		"./sw": 149,
-		"./sw.js": 149,
-		"./ta": 150,
-		"./ta.js": 150,
-		"./te": 151,
-		"./te.js": 151,
-		"./tet": 152,
-		"./tet.js": 152,
-		"./th": 153,
-		"./th.js": 153,
-		"./tl-ph": 154,
-		"./tl-ph.js": 154,
-		"./tlh": 155,
-		"./tlh.js": 155,
-		"./tr": 156,
-		"./tr.js": 156,
-		"./tzl": 157,
-		"./tzl.js": 157,
-		"./tzm": 158,
-		"./tzm-latn": 159,
-		"./tzm-latn.js": 159,
-		"./tzm.js": 158,
-		"./uk": 160,
-		"./uk.js": 160,
-		"./ur": 161,
-		"./ur.js": 161,
-		"./uz": 162,
-		"./uz-latn": 163,
-		"./uz-latn.js": 163,
-		"./uz.js": 162,
-		"./vi": 164,
-		"./vi.js": 164,
-		"./x-pseudo": 165,
-		"./x-pseudo.js": 165,
-		"./yo": 166,
-		"./yo.js": 166,
-		"./zh-cn": 167,
-		"./zh-cn.js": 167,
-		"./zh-hk": 168,
-		"./zh-hk.js": 168,
-		"./zh-tw": 169,
-		"./zh-tw.js": 169
+		"./af": 124,
+		"./af.js": 124,
+		"./ar": 125,
+		"./ar-dz": 126,
+		"./ar-dz.js": 126,
+		"./ar-kw": 127,
+		"./ar-kw.js": 127,
+		"./ar-ly": 128,
+		"./ar-ly.js": 128,
+		"./ar-ma": 129,
+		"./ar-ma.js": 129,
+		"./ar-sa": 130,
+		"./ar-sa.js": 130,
+		"./ar-tn": 131,
+		"./ar-tn.js": 131,
+		"./ar.js": 125,
+		"./az": 132,
+		"./az.js": 132,
+		"./be": 133,
+		"./be.js": 133,
+		"./bg": 134,
+		"./bg.js": 134,
+		"./bn": 135,
+		"./bn.js": 135,
+		"./bo": 136,
+		"./bo.js": 136,
+		"./br": 137,
+		"./br.js": 137,
+		"./bs": 138,
+		"./bs.js": 138,
+		"./ca": 139,
+		"./ca.js": 139,
+		"./cs": 140,
+		"./cs.js": 140,
+		"./cv": 141,
+		"./cv.js": 141,
+		"./cy": 142,
+		"./cy.js": 142,
+		"./da": 143,
+		"./da.js": 143,
+		"./de": 144,
+		"./de-at": 145,
+		"./de-at.js": 145,
+		"./de-ch": 146,
+		"./de-ch.js": 146,
+		"./de.js": 144,
+		"./dv": 147,
+		"./dv.js": 147,
+		"./el": 148,
+		"./el.js": 148,
+		"./en-au": 149,
+		"./en-au.js": 149,
+		"./en-ca": 150,
+		"./en-ca.js": 150,
+		"./en-gb": 151,
+		"./en-gb.js": 151,
+		"./en-ie": 152,
+		"./en-ie.js": 152,
+		"./en-nz": 153,
+		"./en-nz.js": 153,
+		"./eo": 154,
+		"./eo.js": 154,
+		"./es": 155,
+		"./es-do": 156,
+		"./es-do.js": 156,
+		"./es.js": 155,
+		"./et": 157,
+		"./et.js": 157,
+		"./eu": 158,
+		"./eu.js": 158,
+		"./fa": 159,
+		"./fa.js": 159,
+		"./fi": 160,
+		"./fi.js": 160,
+		"./fo": 161,
+		"./fo.js": 161,
+		"./fr": 162,
+		"./fr-ca": 163,
+		"./fr-ca.js": 163,
+		"./fr-ch": 164,
+		"./fr-ch.js": 164,
+		"./fr.js": 162,
+		"./fy": 165,
+		"./fy.js": 165,
+		"./gd": 166,
+		"./gd.js": 166,
+		"./gl": 167,
+		"./gl.js": 167,
+		"./gom-latn": 168,
+		"./gom-latn.js": 168,
+		"./he": 169,
+		"./he.js": 169,
+		"./hi": 170,
+		"./hi.js": 170,
+		"./hr": 171,
+		"./hr.js": 171,
+		"./hu": 172,
+		"./hu.js": 172,
+		"./hy-am": 173,
+		"./hy-am.js": 173,
+		"./id": 174,
+		"./id.js": 174,
+		"./is": 175,
+		"./is.js": 175,
+		"./it": 176,
+		"./it.js": 176,
+		"./ja": 177,
+		"./ja.js": 177,
+		"./jv": 178,
+		"./jv.js": 178,
+		"./ka": 179,
+		"./ka.js": 179,
+		"./kk": 180,
+		"./kk.js": 180,
+		"./km": 181,
+		"./km.js": 181,
+		"./kn": 182,
+		"./kn.js": 182,
+		"./ko": 183,
+		"./ko.js": 183,
+		"./ky": 184,
+		"./ky.js": 184,
+		"./lb": 185,
+		"./lb.js": 185,
+		"./lo": 186,
+		"./lo.js": 186,
+		"./lt": 187,
+		"./lt.js": 187,
+		"./lv": 188,
+		"./lv.js": 188,
+		"./me": 189,
+		"./me.js": 189,
+		"./mi": 190,
+		"./mi.js": 190,
+		"./mk": 191,
+		"./mk.js": 191,
+		"./ml": 192,
+		"./ml.js": 192,
+		"./mr": 193,
+		"./mr.js": 193,
+		"./ms": 194,
+		"./ms-my": 195,
+		"./ms-my.js": 195,
+		"./ms.js": 194,
+		"./my": 196,
+		"./my.js": 196,
+		"./nb": 197,
+		"./nb.js": 197,
+		"./ne": 198,
+		"./ne.js": 198,
+		"./nl": 199,
+		"./nl-be": 200,
+		"./nl-be.js": 200,
+		"./nl.js": 199,
+		"./nn": 201,
+		"./nn.js": 201,
+		"./pa-in": 202,
+		"./pa-in.js": 202,
+		"./pl": 203,
+		"./pl.js": 203,
+		"./pt": 204,
+		"./pt-br": 205,
+		"./pt-br.js": 205,
+		"./pt.js": 204,
+		"./ro": 206,
+		"./ro.js": 206,
+		"./ru": 207,
+		"./ru.js": 207,
+		"./sd": 208,
+		"./sd.js": 208,
+		"./se": 209,
+		"./se.js": 209,
+		"./si": 210,
+		"./si.js": 210,
+		"./sk": 211,
+		"./sk.js": 211,
+		"./sl": 212,
+		"./sl.js": 212,
+		"./sq": 213,
+		"./sq.js": 213,
+		"./sr": 214,
+		"./sr-cyrl": 215,
+		"./sr-cyrl.js": 215,
+		"./sr.js": 214,
+		"./ss": 216,
+		"./ss.js": 216,
+		"./sv": 217,
+		"./sv.js": 217,
+		"./sw": 218,
+		"./sw.js": 218,
+		"./ta": 219,
+		"./ta.js": 219,
+		"./te": 220,
+		"./te.js": 220,
+		"./tet": 221,
+		"./tet.js": 221,
+		"./th": 222,
+		"./th.js": 222,
+		"./tl-ph": 223,
+		"./tl-ph.js": 223,
+		"./tlh": 224,
+		"./tlh.js": 224,
+		"./tr": 225,
+		"./tr.js": 225,
+		"./tzl": 226,
+		"./tzl.js": 226,
+		"./tzm": 227,
+		"./tzm-latn": 228,
+		"./tzm-latn.js": 228,
+		"./tzm.js": 227,
+		"./uk": 229,
+		"./uk.js": 229,
+		"./ur": 230,
+		"./ur.js": 230,
+		"./uz": 231,
+		"./uz-latn": 232,
+		"./uz-latn.js": 232,
+		"./uz.js": 231,
+		"./vi": 233,
+		"./vi.js": 233,
+		"./x-pseudo": 234,
+		"./x-pseudo.js": 234,
+		"./yo": 235,
+		"./yo.js": 235,
+		"./zh-cn": 236,
+		"./zh-cn.js": 236,
+		"./zh-hk": 237,
+		"./zh-hk.js": 237,
+		"./zh-tw": 238,
+		"./zh-tw.js": 238
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -1251,79 +1320,10 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 54;
+	webpackContext.id = 123;
 
 
 /***/ },
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */,
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
 /* 124 */,
 /* 125 */,
 /* 126 */,
@@ -1370,7 +1370,76 @@ webpackJsonp([0],[
 /* 167 */,
 /* 168 */,
 /* 169 */,
-/* 170 */
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1380,11 +1449,11 @@ webpackJsonp([0],[
 	});
 	exports.dateWrapperComponent = undefined;
 	
-	var _dateWrapper = __webpack_require__(171);
+	var _dateWrapper = __webpack_require__(240);
 	
 	var _dateWrapper2 = _interopRequireDefault(_dateWrapper);
 	
-	var _dateWrapper3 = __webpack_require__(172);
+	var _dateWrapper3 = __webpack_require__(241);
 	
 	var _dateWrapper4 = _interopRequireDefault(_dateWrapper3);
 	
@@ -1401,13 +1470,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 171 */
+/* 240 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"date-wrapper\">\r\n  <div layout-gt-xs=\"row\" layout-xs=\"column\" layout-align-xs=\"space-between none\">\r\n    <div flex-gt-xs=\"45\" flex-xs=\"grow\">\r\n      <date-selector \r\n        placeholder=\"$ctrl.dates.start.placeholder\"\r\n        max-date=\"$ctrl.dates.end.value\"\r\n        label=\"$ctrl.dates.start.label\"\r\n        date=\"$ctrl.dates.start.value\"\r\n        on-change=\"$ctrl.handleStartDateChange($event)\">\r\n      </date-selector>\r\n    </div>\r\n\r\n    <div flex-xs=\"grow\" flex-gt-xs=\"10\">&ensp;</div>\r\n\r\n    <div flex-gt-xs=\"45\" flex-xs=\"grow\">\r\n      <date-selector \r\n        placeholder=\"$ctrl.dates.end.placeholder\"\r\n        min-date=\"$ctrl.dates.start.value\"\r\n        label=\"$ctrl.dates.end.label\"\r\n        date=\"$ctrl.dates.end.value\"\r\n        on-change=\"$ctrl.handleEndDateChange($event)\">\r\n      </date-selector>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ },
-/* 172 */
+/* 241 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1471,7 +1540,7 @@ webpackJsonp([0],[
 	exports.default = DateWrapper;
 
 /***/ },
-/* 173 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1484,34 +1553,34 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _angularAria = __webpack_require__(174);
+	var _angularAria = __webpack_require__(243);
 	
 	var _angularAria2 = _interopRequireDefault(_angularAria);
 	
-	var _angularAnimate = __webpack_require__(176);
+	var _angularAnimate = __webpack_require__(245);
 	
 	var _angularAnimate2 = _interopRequireDefault(_angularAnimate);
 	
-	var _angularMaterial = __webpack_require__(178);
+	var _angularMaterial = __webpack_require__(247);
 	
 	var _angularMaterial2 = _interopRequireDefault(_angularMaterial);
 	
-	var _dateSelector = __webpack_require__(180);
+	var _dateSelector = __webpack_require__(249);
 	
-	__webpack_require__(183);
+	__webpack_require__(252);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.dateSelector', [_angularMaterial2.default]).component('dateSelector', _dateSelector.dateSelectorComponent).name;
 
 /***/ },
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1521,11 +1590,11 @@ webpackJsonp([0],[
 	});
 	exports.dateSelectorComponent = undefined;
 	
-	var _dateSelector = __webpack_require__(181);
+	var _dateSelector = __webpack_require__(250);
 	
 	var _dateSelector2 = _interopRequireDefault(_dateSelector);
 	
-	var _dateSelector3 = __webpack_require__(182);
+	var _dateSelector3 = __webpack_require__(251);
 	
 	var _dateSelector4 = _interopRequireDefault(_dateSelector3);
 	
@@ -1545,13 +1614,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 181 */
+/* 250 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"date-selector\">\r\n    <div flex-xs=\"45\">\r\n        <i class=\"fa fa-calendar calendar\" aria-hidden=\"true\"></i>\r\n        <label>{{ $ctrl.label }}</label>\r\n    </div>\r\n\r\n    <div flex-xs=\"grow\">\r\n        <div class=\"date-picker-wrapper\">\r\n            <md-datepicker \r\n                md-open-on-focus=\"true\"\r\n                md-hide-icons=\"calendar\"\r\n                md-min-date=\"$ctrl.minDate\"\r\n                md-max-date=\"$ctrl.maxDate\"\r\n                required\r\n                ng-change=\"$ctrl.onChange({ $event: { date: $ctrl.date } })\"\r\n                ng-model=\"::$ctrl.date\">\r\n            </md-datepicker>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n"
 
 /***/ },
-/* 182 */
+/* 251 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1569,16 +1638,16 @@ webpackJsonp([0],[
 	exports.default = DateSelector;
 
 /***/ },
-/* 183 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(184);
+	var content = __webpack_require__(253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1595,10 +1664,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 184 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -1609,16 +1678,16 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 185 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(186);
+	var content = __webpack_require__(255);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1635,10 +1704,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 186 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -1649,7 +1718,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 187 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1662,14 +1731,14 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _spinner = __webpack_require__(188);
+	var _spinner = __webpack_require__(257);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.spinner', []).component('spinner', _spinner.spinner).name;
 
 /***/ },
-/* 188 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1679,7 +1748,7 @@ webpackJsonp([0],[
 	});
 	exports.spinner = undefined;
 	
-	var _spinner = __webpack_require__(189);
+	var _spinner = __webpack_require__(258);
 	
 	var _spinner2 = _interopRequireDefault(_spinner);
 	
@@ -1693,22 +1762,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 189 */
+/* 258 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"loader\" ng-show=\"$ctrl.show\">\r\n    <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\r\n    <span class=\"sr-only\">Loading...</span>\r\n</div>"
 
 /***/ },
-/* 190 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(191);
+	var content = __webpack_require__(260);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1725,10 +1794,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 191 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -1739,7 +1808,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 192 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1752,19 +1821,19 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _results = __webpack_require__(193);
+	var _results = __webpack_require__(262);
 	
-	var _results2 = __webpack_require__(196);
+	var _results2 = __webpack_require__(265);
 	
-	var _headline = __webpack_require__(197);
+	var _headline = __webpack_require__(266);
 	
 	var _headline2 = _interopRequireDefault(_headline);
 	
-	var _flightsList = __webpack_require__(202);
+	var _flightsList = __webpack_require__(271);
 	
 	var _flightsList2 = _interopRequireDefault(_flightsList);
 	
-	var _spinner = __webpack_require__(187);
+	var _spinner = __webpack_require__(256);
 	
 	var _spinner2 = _interopRequireDefault(_spinner);
 	
@@ -1773,7 +1842,7 @@ webpackJsonp([0],[
 	exports.default = _angular2.default.module('app.components.results', [_headline2.default, _flightsList2.default, _spinner2.default]).component('results', _results.results).config(_results2.resultsConfig).name;
 
 /***/ },
-/* 193 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1783,11 +1852,11 @@ webpackJsonp([0],[
 	});
 	exports.results = undefined;
 	
-	var _results = __webpack_require__(194);
+	var _results = __webpack_require__(263);
 	
 	var _results2 = _interopRequireDefault(_results);
 	
-	var _results3 = __webpack_require__(195);
+	var _results3 = __webpack_require__(264);
 	
 	var _results4 = _interopRequireDefault(_results3);
 	
@@ -1799,13 +1868,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 194 */
+/* 263 */
 /***/ function(module, exports) {
 
 	module.exports = "<div ng-show=\"$ctrl.areResultsAvailable\">\r\n    <headline\r\n        airports=\"$ctrl.airports\"\r\n        flights-length=\"$ctrl.flights.length\">\r\n    </headline>\r\n    <flights-list \r\n        flights=\"$ctrl.flights\">\r\n    </flights-list>\r\n</div>\r\n<spinner show=\"!$ctrl.areResultsAvailable\"><spinner>"
 
 /***/ },
-/* 195 */
+/* 264 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1895,7 +1964,7 @@ webpackJsonp([0],[
 	exports.default = Results;
 
 /***/ },
-/* 196 */
+/* 265 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1914,7 +1983,7 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 197 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1927,16 +1996,16 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _headline = __webpack_require__(198);
+	var _headline = __webpack_require__(267);
 	
-	__webpack_require__(200);
+	__webpack_require__(269);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.headline', []).component('headline', _headline.headline).name;
 
 /***/ },
-/* 198 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1946,7 +2015,7 @@ webpackJsonp([0],[
 	});
 	exports.headline = undefined;
 	
-	var _headline = __webpack_require__(199);
+	var _headline = __webpack_require__(268);
 	
 	var _headline2 = _interopRequireDefault(_headline);
 	
@@ -1961,22 +2030,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 199 */
+/* 268 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"headline\">\r\n    <span class=\"form-result\" ng-show=\"!!$ctrl.flightsLength\">\r\n    Found {{ $ctrl.flightsLength }} {{ $ctrl.flightsLength === 1 ? 'flight' : 'flights' }} from \r\n        <strong>{{ $ctrl.airports.departure }}</strong>\r\n            to \r\n        <strong>{{ $ctrl.airports.destination }}</strong>:\r\n    </span>\r\n    <span class=\"form-result\" ng-show=\"!$ctrl.flightsLength\">\r\n        There aren't any flights that match your criteria.\r\n    </span>\r\n</div>"
 
 /***/ },
-/* 200 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(201);
+	var content = __webpack_require__(270);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1993,10 +2062,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 201 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -2007,7 +2076,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 202 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2020,20 +2089,20 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _flightsList = __webpack_require__(203);
+	var _flightsList = __webpack_require__(272);
 	
-	var _flight = __webpack_require__(205);
+	var _flight = __webpack_require__(274);
 	
 	var _flight2 = _interopRequireDefault(_flight);
 	
-	__webpack_require__(210);
+	__webpack_require__(279);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.flightsList', [_flight2.default]).component('flightsList', _flightsList.flightsList).name;
 
 /***/ },
-/* 203 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2043,7 +2112,7 @@ webpackJsonp([0],[
 	});
 	exports.flightsList = undefined;
 	
-	var _flightsList = __webpack_require__(204);
+	var _flightsList = __webpack_require__(273);
 	
 	var _flightsList2 = _interopRequireDefault(_flightsList);
 	
@@ -2057,13 +2126,13 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 204 */
+/* 273 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"flights-list\">\r\n    <flight \r\n        flight=\"flight\"\r\n        ng-repeat=\"flight in $ctrl.flights\">\r\n    </flight>\r\n</div>"
 
 /***/ },
-/* 205 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2076,16 +2145,16 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _flight = __webpack_require__(206);
+	var _flight = __webpack_require__(275);
 	
-	__webpack_require__(208);
+	__webpack_require__(277);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.components.flight', []).component('flight', _flight.flight).name;
 
 /***/ },
-/* 206 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2095,7 +2164,7 @@ webpackJsonp([0],[
 	});
 	exports.flight = undefined;
 	
-	var _flight = __webpack_require__(207);
+	var _flight = __webpack_require__(276);
 	
 	var _flight2 = _interopRequireDefault(_flight);
 	
@@ -2109,22 +2178,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 207 */
+/* 276 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"flight\" \r\n     layout-xs=\"column\" \r\n     layout-gt-xs=\"row\" \r\n     layout-align-gt-xs=\"start start\"\r\n     layout-align-xs=\"center none\">\r\n        <div class=\"date-info date-from\" \r\n             flex-gt-xs=\"40\"\r\n             flex-xs=\"grow\" \r\n             flex-order-xs=\"3\">\r\n                <i class=\"fa fa-plane\" aria-hidden=\"true\"></i><label>Fly out:</label>\r\n                <span>{{ $ctrl.flight.dateFrom }}</span>\r\n        </div>\r\n        <div class=\"date-info date-to\" \r\n             flex-gt-xs=\"40\"\r\n             flex-xs=\"grow\" \r\n             flex-order-xs=\"5\">\r\n                <i class=\"fa fa-plane\" aria-hidden=\"true\"></i><label>Fly back:</label>\r\n                <span>{{ $ctrl.flight.dateTo }}</span>\r\n        </div>\r\n        <div class=\"price\" \r\n             flex-offset-gt-xs=\"5\"\r\n             flex-gt-xs=\"15\"\r\n             flex-xs=\"25\" \r\n             flex-offset-xs=\"25\" \r\n             flex-order-xs=\"1\">\r\n                <i class=\"fa fa-credit-card\" aria-hidden=\"true\"></i>\r\n                <strong>{{ $ctrl.flight.currency }}{{ $ctrl.flight.price | number:2 }}</strong>    \r\n        </div>\r\n        <div flex-xs=\"grow\" flex-order-xs=\"2\" show-xs>&ensp;</div>\r\n        <div flex-xs=\"grow\" flex-order-xs=\"4\" show-xs>&ensp;</div>\r\n</div>"
 
 /***/ },
-/* 208 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(209);
+	var content = __webpack_require__(278);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2141,10 +2210,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 209 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -2155,16 +2224,16 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 210 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(211);
+	var content = __webpack_require__(280);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2181,10 +2250,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 211 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -2195,16 +2264,16 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 212 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(213);
+	var content = __webpack_require__(282);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2221,10 +2290,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 213 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -2235,7 +2304,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 214 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2248,15 +2317,15 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _airports = __webpack_require__(215);
+	var _airports = __webpack_require__(284);
 	
 	var _airports2 = _interopRequireDefault(_airports);
 	
-	var _flights = __webpack_require__(217);
+	var _flights = __webpack_require__(286);
 	
 	var _flights2 = _interopRequireDefault(_flights);
 	
-	var _dates = __webpack_require__(218);
+	var _dates = __webpack_require__(287);
 	
 	var _dates2 = _interopRequireDefault(_dates);
 	
@@ -2265,7 +2334,7 @@ webpackJsonp([0],[
 	exports.default = _angular2.default.module('app.services', []).service('AirportsService', _airports2.default).service('FlightsService', _flights2.default).service('DatesService', _dates2.default).name;
 
 /***/ },
-/* 215 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2274,7 +2343,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 	
-	var _api = __webpack_require__(216);
+	var _api = __webpack_require__(285);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -2385,7 +2454,7 @@ webpackJsonp([0],[
 	exports.default = AirportsService;
 
 /***/ },
-/* 216 */
+/* 285 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2410,7 +2479,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 217 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2419,7 +2488,7 @@ webpackJsonp([0],[
 	  value: true
 	});
 	
-	var _api = __webpack_require__(216);
+	var _api = __webpack_require__(285);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -2490,7 +2559,7 @@ webpackJsonp([0],[
 	exports.default = FlightsService;
 
 /***/ },
-/* 218 */
+/* 287 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2557,7 +2626,7 @@ webpackJsonp([0],[
 	exports.default = DatesService;
 
 /***/ },
-/* 219 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2570,14 +2639,14 @@ webpackJsonp([0],[
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _keyFocus = __webpack_require__(220);
+	var _keyFocus = __webpack_require__(289);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.directives', []).directive('keyFocus', _keyFocus.keyFocus).name;
 
 /***/ },
-/* 220 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2622,7 +2691,7 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 221 */
+/* 290 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2639,7 +2708,7 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 222 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2656,18 +2725,18 @@ webpackJsonp([0],[
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _home = __webpack_require__(223);
+	var _home = __webpack_require__(292);
 	
-	var _home2 = __webpack_require__(224);
+	var _home2 = __webpack_require__(293);
 	
-	__webpack_require__(226);
+	__webpack_require__(295);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _angular2.default.module('app.home', [_angularUiRouter2.default]).component('home', _home2.homeComponent).config(_home.homeConfig).name;
 
 /***/ },
-/* 223 */
+/* 292 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2687,7 +2756,7 @@ webpackJsonp([0],[
 	}];
 
 /***/ },
-/* 224 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2697,7 +2766,7 @@ webpackJsonp([0],[
 	});
 	exports.homeComponent = undefined;
 	
-	var _home = __webpack_require__(225);
+	var _home = __webpack_require__(294);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
@@ -2708,22 +2777,22 @@ webpackJsonp([0],[
 	};
 
 /***/ },
-/* 225 */
+/* 294 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"home\" layout=\"row\" layout-wrap>\r\n    <div flex=\"grow\">\r\n        <top-bar></top-bar>\r\n    </div>\r\n    <div \r\n        flex-gt-md=\"60\" \r\n        flex-offset-gt-md=\"20\" \r\n        flex-gt-xs=\"66\"\r\n        flex-offset-gt-xs=\"15\">\r\n            <flights-finder></flights-finder>\r\n    </div>\r\n</div>"
 
 /***/ },
-/* 226 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(227);
+	var content = __webpack_require__(296);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2740,10 +2809,10 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 227 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
 	
 	
@@ -2754,27 +2823,27 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(240);
+	var content = __webpack_require__(309);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(24)(content, {});
+	var update = __webpack_require__(93)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -2791,12 +2860,12 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 240 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(23)();
+	exports = module.exports = __webpack_require__(92)();
 	// imports
-	exports.i(__webpack_require__(241), "");
+	exports.i(__webpack_require__(310), "");
 	
 	// module
 	exports.push([module.id, "body {\n  font-family: Roboto, Arial, Helvetica, sans-serif;\n  font-size: 13px;\n  color: #565454;\n  background-color: #f4f4f4; }\n", "", {"version":3,"sources":["/./src/src/app/app.scss"],"names":[],"mappings":"AAEA;EACI,kDAAkD;EAClD,gBAAgB;EAChB,eAAe;EACf,0BAA0B,EAC7B","file":"app.scss","sourcesContent":["@import '../../node_modules/angular-material/angular-material.css';\r\n\r\nbody {\r\n    font-family: Roboto, Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n    color: #565454;\r\n    background-color: #f4f4f4;\r\n}\r\n\r\n"],"sourceRoot":"webpack://"}]);

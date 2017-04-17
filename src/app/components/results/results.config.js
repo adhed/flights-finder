@@ -2,7 +2,7 @@ export const resultsConfig = ($stateProvider, $urlRouterProvider) => {
     'ngInject';
 
     $stateProvider
-     .state('home.flights', {
+     .state('app.home.flights', {
          url: 'flights/:codeFrom/:codeTo/:nameFrom/:nameTo/:dateFrom/:dateTo',
          component: 'results',
 

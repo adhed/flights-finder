@@ -7,8 +7,6 @@ class AirportsBoxController {
 
     $onInit() {
         this._filter = '';
-        this._allAirports = [];
-        this._routes = {};
         this.inputs = {
             departure: {
                 label: 'Departure',
@@ -32,7 +30,7 @@ class AirportsBoxController {
             }
         };
 
-        this._collectAirportsInfo();
+        this._updateAvailableAirports();
     }
 
     handleSwapButtonClick() {
@@ -68,7 +66,7 @@ class AirportsBoxController {
     }
 
     _updateLimitedRoutes(obj, airportIATACode) {
-        obj.limitedRoutes = this._airportsService.getPossibleRoutes(this._routes, airportIATACode)
+        obj.limitedRoutes = this._airportsService.getPossibleRoutes(this.routes, airportIATACode)
     }
 
     _swapAirportsInInputs() {
@@ -88,26 +86,12 @@ class AirportsBoxController {
         })
     }
 
-    _collectAirportsInfo() {
-        this._airportsService
-            .getAirportsInfo()
-            .then((response) => {
-                if (!response) { return; }
-                this._allAirports = response.airports;
-                this._routes = response.routes;
-                this._updateAvailableAirports();
-            })
-            .catch((error) => {
-                console.debug("Problem with getting airports info:", error);
-            });
-    }
-
     _updateAvailableAirports() {
         this.inputs.departure.options = this._airportsService
-            .getAirports(this._allAirports, this.inputs.destination.limitedRoutes, this.inputs.departure.filter);
+            .getAirports(this.allAirports, this.inputs.destination.limitedRoutes, this.inputs.departure.filter);
 
         this.inputs.destination.options = this._airportsService
-            .getAirports(this._allAirports, this.inputs.departure.limitedRoutes, this.inputs.destination.filter);
+            .getAirports(this.allAirports, this.inputs.departure.limitedRoutes, this.inputs.destination.filter);
     }
 
 }

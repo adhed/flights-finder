@@ -1,21 +1,23 @@
-# Flights app
+# Flights finder
 
-## Development
+AngularJS 1.6 (+ ECMAScript 6) components based app for finding cheap flights using Ryanair's API. 
 
-Create a JS bundle with Webpack::
+## Demo
 
-  $ npm run build
+https://adhed.github.io/flights-finder/dist
 
-Start the Webpack development server on 'localhost:3000'::
+# How to run
 
-  $ npm run dev
+* Install GIT
+* Install NodeJS
+* Install npm
+* Type in console:
+```
+git clone https://github.com/adhed/flights-finder.git
 
-Run tests::
-
-  $ npm run test
-
-Linting::
-
-  $ npm run lint
-
+cd flights-finder
+npm install
+npm start
+```
+* Open localhost:3000 in the browser
 

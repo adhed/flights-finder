@@ -1,4 +1,4 @@
-export const appConfig = ($stateProvider) => {
+export const appConfig = ($stateProvider, $urlRouterProvider) => {
     'ngInject';
     
     $stateProvider

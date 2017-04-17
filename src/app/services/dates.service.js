@@ -22,11 +22,11 @@ class DatesService {
         const minute = date.getMinutes();
 
         return {
-        year,
-        minute: this._getParsedDigit(minute),
-        hour: this._getParsedDigit(hour),
-        month: this._getParsedDigit(month),
-        day: this._getParsedDigit(day)
+            year,
+            minute: this._getParsedDigit(minute),
+            hour: this._getParsedDigit(hour),
+            month: this._getParsedDigit(month),
+            day: this._getParsedDigit(day)
         }
         
     }
